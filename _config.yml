@@ -1,14 +1,14 @@
-title:              Clean Blog
-email:              your-email@example.com
-description:        A Blog Theme by Start Bootstrap
-author:             Start Bootstrap
-baseurl:            "/startbootstrap-clean-blog-jekyll"
-url:                "https://startbootstrap.github.io"
+title:              David Andai
+email:              andaidavid8@gmail.com
+description:        Health Data Analysis 
+author:             David Andai
+baseurl:            ""
+url:                "https://Dr-andai.github.io"
 
 # Social Profiles
-twitter_username:   SBootstrap
-github_username:    StartBootstrap
-facebook_username:  StartBootstrap
+twitter_username:   andai_d
+github_username:    Dr-Andai
+facebook_username:  
 instagram_username:  
 linkedin_username:
 
