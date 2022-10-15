@@ -1,0 +1,130 @@
+I"�Q<h1 id="health-expenditure--gdp">Health Expenditure % GDP</h1>
+<p>David Andai
+10/15/2022</p>
+
+<p>When trying to figure out how to allocate our financial resources, we
+more often than not asses our expenses so as to develop a budget. Some
+items on the budget list end up having a bigger share of the portion
+depending on our various priorities. When it comes to matters health at
+a National level, we use the Current Health Expenditure as a share of
+GDP to provide an indication on the level of resources channeled to
+health relative to other uses.</p>
+
+<p>But what is GDP? Gross domestic product (GDP) is the standard measure of
+the value added created through the production of goods and services in
+a country during a certain period. (IMAGE)</p>
+
+<p>As GDP factors in the National outlook of the economy, health spending
+measures the final consumption of health care goods and services
+(i.e. current health expenditure). This includes personal health care
+(curative care, rehabilitative care, long-term care, ancillary services
+and medical goods) and collective services (prevention and public health
+services as well as health administration), but excluding spending on
+investments (OECD 2022).</p>
+
+<p>Health Expenditure as percentage of GDP Data</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">##Import and Cleaning Data Set</span><span class="w">
+</span><span class="n">setwd</span><span class="p">(</span><span class="s1">'C:/Users/user/Documents/R/GDP/GDP'</span><span class="p">)</span><span class="w">
+</span><span class="n">he_gdp</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">import</span><span class="p">(</span><span class="s1">'API_SH.XPD.CHEX.GD.ZS_DS2_en_csv_v2_4499032.csv'</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">#Data Cleaning</span><span class="w">
+</span><span class="c1">##reshape data frame 2009-2019 columns</span><span class="w">
+</span><span class="n">he_gdp2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">he_gdp</span><span class="p">[</span><span class="o">-</span><span class="nf">c</span><span class="p">(</span><span class="m">5</span><span class="o">:</span><span class="m">53</span><span class="p">)]</span><span class="w">
+</span><span class="nf">names</span><span class="p">(</span><span class="n">he_gdp2</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">NULL</span><span class="w">
+</span><span class="nf">names</span><span class="p">(</span><span class="n">he_gdp2</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">he_gdp2</span><span class="p">[</span><span class="m">1</span><span class="p">,]</span><span class="w">
+</span><span class="c1">##remove first row and rename The Columns</span><span class="w">
+</span><span class="n">he_gdp2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">he_gdp2</span><span class="w"> </span><span class="p">[</span><span class="o">-</span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">),]</span><span class="w">
+</span><span class="n">he_gdp2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">he_gdp2</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">janitor</span><span class="o">::</span><span class="n">clean_names</span><span class="p">()</span><span class="w">
+</span><span class="c1">#delete empty columns</span><span class="w">
+</span><span class="n">he_gdp2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">he_gdp2</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="o">!</span><span class="nf">names</span><span class="p">(</span><span class="n">he_gdp2</span><span class="p">)</span><span class="o">%in%</span><span class="w">
+                     </span><span class="nf">c</span><span class="p">(</span><span class="s2">"country_code"</span><span class="p">,</span><span class="w"> </span><span class="s2">"indicator_name"</span><span class="p">,</span><span class="w"> </span><span class="s2">"indicator_code"</span><span class="p">,</span><span class="w"> </span><span class="s2">"na"</span><span class="p">,</span><span class="w"> </span><span class="s2">"x2020"</span><span class="p">,</span><span class="w"> </span><span class="s2">"x2021"</span><span class="p">)]</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Health spending shows the importance of the health sector in the whole
+economy and indicates the societal priority which health is given
+measured in monetary terms (WHO). This analysis focuses how Kenya
+compares to its neighbours in the East Africa Community. The latest data
+entry is from 2019, while a look at a 10 year trend is assesd…….</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#Obtain East Africa Countries</span><span class="w">
+</span><span class="n">ea_gdp</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">he_gdp2</span><span class="w"> </span><span class="p">[</span><span class="n">he_gdp2</span><span class="o">$</span><span class="n">country_name</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Kenya"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Tanzania"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Uganda"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"Rwanda"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Congo, Dem. Rep."</span><span class="p">,</span><span class="w"> </span><span class="s2">"Burundi"</span><span class="p">,</span><span class="w"> </span><span class="s2">"South Sudan"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Ethiopia"</span><span class="p">),]</span><span class="w">
+</span><span class="c1">#cleaning data</span><span class="w">
+</span><span class="n">ea_gdp_19</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">ea_gdp</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s1">'country_name'</span><span class="p">,</span><span class="w"> </span><span class="s1">'x2019'</span><span class="p">)]</span><span class="w">
+</span><span class="c1">##round to 2 decimal places</span><span class="w">
+</span><span class="n">ea_gdp_19</span><span class="p">[,</span><span class="s1">'x2019'</span><span class="p">]</span><span class="o">=</span><span class="nf">round</span><span class="p">(</span><span class="n">ea_gdp_19</span><span class="p">[,</span><span class="s1">'x2019'</span><span class="p">],</span><span class="m">2</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">##Data Visualization of HE $ of GDP in 2019</span><span class="w">
+</span><span class="n">plot1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">ggplot</span><span class="p">(</span><span class="n">ea_gdp_19</span><span class="p">,</span><span class="w">
+       </span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reorder</span><span class="p">(</span><span class="n">country_name</span><span class="p">,</span><span class="o">-</span><span class="n">x2019</span><span class="p">),</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="w"> </span><span class="n">x2019</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reorder</span><span class="p">(</span><span class="n">country_name</span><span class="p">,</span><span class="o">-</span><span class="n">x2019</span><span class="p">)))</span><span class="o">+</span><span class="w">
+  </span><span class="n">geom_bar</span><span class="p">(</span><span class="n">stat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'identity'</span><span class="p">,</span><span class="n">show.legend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span><span class="o">+</span><span class="w">
+  </span><span class="n">scale_fill_manual</span><span class="p">(</span><span class="n">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Kenya"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"#FF0000"</span><span class="p">,</span><span class="w">
+                               </span><span class="s2">"Tanzania"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"#5cac94"</span><span class="p">,</span><span class="w">
+                               </span><span class="s2">"Uganda"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"#5cac94"</span><span class="p">,</span><span class="w">
+                               </span><span class="s2">"Rwanda"</span><span class="o">=</span><span class="w"> </span><span class="s2">"#5cac94"</span><span class="p">,</span><span class="w"> 
+                               </span><span class="s2">"Congo, Dem. Rep."</span><span class="o">=</span><span class="w"> </span><span class="s2">"#5cac94"</span><span class="p">,</span><span class="w"> 
+                               </span><span class="s2">"Burundi"</span><span class="o">=</span><span class="w"> </span><span class="s2">"#5cac94"</span><span class="p">,</span><span class="w">
+                               </span><span class="s2">"South Sudan"</span><span class="o">=</span><span class="w"> </span><span class="s2">"#5cac94"</span><span class="p">,</span><span class="w">
+                               </span><span class="s2">"Ethiopia"</span><span class="o">=</span><span class="w"> </span><span class="s2">"#5cac94"</span><span class="p">))</span><span class="o">+</span><span class="w">
+  </span><span class="n">theme_few</span><span class="p">()</span><span class="o">+</span><span class="w">
+  </span><span class="n">theme</span><span class="p">(</span><span class="n">axis.text.x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">element_text</span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">45</span><span class="p">,</span><span class="w"> </span><span class="n">hjust</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">))</span><span class="o">+</span><span class="w">
+  </span><span class="n">geom_text</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">paste</span><span class="p">(</span><span class="n">format</span><span class="p">(</span><span class="n">x2019</span><span class="p">,</span><span class="w"> </span><span class="n">nsmall</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">),</span><span class="w"> </span><span class="s2">"%"</span><span class="p">)),</span><span class="w"> </span><span class="n">vjust</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">-0.2</span><span class="p">)</span><span class="o">+</span><span class="w">
+  </span><span class="n">labs</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">"Healthcare Expenditure as Percentage of GDP"</span><span class="p">,</span><span class="w"> 
+        </span><span class="n">subtitle</span><span class="w"> </span><span class="o">=</span><span class="s2">"In 2019 in EastAfrican Countries"</span><span class="p">)</span><span class="o">+</span><span class="w">
+  </span><span class="n">labs</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+       </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">""</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plot1</span><span class="w">
+</span></code></pre></div></div>
+
+<p><img src="HE-GDP_files/figure-gfm/unnamed-chunk-3-1.png" alt="" /><!-- --></p>
+
+<p>In 2019, health expenditure as a share of GDP for Kenya was 4.6 %.
+Between 2010 and 2019, health expenditure as a share of GDP in Kenya was
+decreasing on average by 2.44% each year, although before that, it grew
+from 4.6 % in 2000 to 6.1 % in 2010.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#Trend of Healthcare Expenditure % of GDP in 10years</span><span class="w">
+
+</span><span class="c1">#Pivot data;  Wide-to-long</span><span class="w">
+</span><span class="c1">##pivot_data</span><span class="w">
+</span><span class="n">ea_gdp2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">ea_gdp</span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">pivot_longer</span><span class="p">(</span><span class="w">
+    </span><span class="n">cols</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"x2009"</span><span class="o">:</span><span class="s2">"x2019"</span><span class="p">,</span><span class="w">
+    </span><span class="n">names_to</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"year"</span><span class="p">,</span><span class="w">
+    </span><span class="n">values_to</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"gdp"</span><span class="w">
+  </span><span class="p">)</span><span class="w">
+
+</span><span class="c1">#Convert year column to numeric</span><span class="w">
+</span><span class="n">years</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">str_match</span><span class="p">(</span><span class="n">ea_gdp2</span><span class="o">$</span><span class="n">year</span><span class="p">,</span><span class="s2">"[0-9]+"</span><span class="p">))</span><span class="w">
+
+</span><span class="n">ea_gdp2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">cbind</span><span class="p">(</span><span class="n">ea_gdp2</span><span class="p">,</span><span class="w"> </span><span class="n">years</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">#Data Visualization</span><span class="w">
+</span><span class="n">myColours2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"#040c04"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#4d372c"</span><span class="p">,</span><span class="s2">"#5cac94"</span><span class="p">,</span><span class="s2">"#FF0000"</span><span class="p">,</span><span class="s2">"#4d3ec0"</span><span class="p">,</span><span class="s2">"#acc6d8"</span><span class="p">,</span><span class="w">
+               </span><span class="s2">"#24a4d4"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#ca5cdd"</span><span class="p">)</span><span class="w">
+</span><span class="n">plot2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">ea_gdp2</span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">mutate</span><span class="p">(</span><span class="n">isKenya</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">country_name</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"Kenya"</span><span class="p">))</span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">ggplot</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">years</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">gdp</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="o">=</span><span class="n">country_name</span><span class="p">))</span><span class="o">+</span><span class="w">
+  </span><span class="n">geom_line</span><span class="p">(</span><span class="w"> </span><span class="n">aes</span><span class="w"> </span><span class="p">(</span><span class="n">linetype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">isKenya</span><span class="p">),</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.6</span><span class="p">)</span><span class="o">+</span><span class="w">
+  </span><span class="n">labs</span><span class="w"> </span><span class="p">(</span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"East Africa Countires Health Expenditure  (% of GDP)"</span><span class="p">,</span><span class="w">
+        </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"HE (% 0f GDP)"</span><span class="p">,</span><span class="w">
+        </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Country"</span><span class="p">)</span><span class="o">+</span><span class="w">
+  </span><span class="n">scale_x_continuous</span><span class="p">(</span><span class="n">breaks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2009</span><span class="o">:</span><span class="m">2019</span><span class="p">)</span><span class="o">+</span><span class="w">
+  </span><span class="n">theme_few</span><span class="p">()</span><span class="o">+</span><span class="w">
+  </span><span class="n">scale_linetype_manual</span><span class="p">(</span><span class="n">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="p">(</span><span class="s2">"dashed"</span><span class="p">,</span><span class="w"> </span><span class="s2">"solid"</span><span class="p">),</span><span class="w"> </span><span class="n">guide</span><span class="w"> </span><span class="o">=</span><span class="s2">"none"</span><span class="p">)</span><span class="o">+</span><span class="w">
+  </span><span class="n">scale_color_manual</span><span class="p">(</span><span class="n">values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myColours2</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plot2</span><span class="w">
+</span></code></pre></div></div>
+
+<p><img src="HE-GDP_files/figure-gfm/unnamed-chunk-5-1.png" alt="" /><!-- --> Over the last
+few years, there has been a strain on global economy following the
+Covid-19 virus and now the Ukraine-Russia war. Such constraints forces
+the governments to cut down on spending, including health spending.</p>
+:ET
