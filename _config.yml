@@ -1,6 +1,6 @@
 title:              MI_Africa
 email:              andaidavid8@gmail.com
-description:        Health Data Analysis 
+description:        Healthcare Data 
 author:             David Andai
 baseurl:            ""
 url:                "https://Dr-andai.github.io"
@@ -10,7 +10,7 @@ twitter_username:   andai_d
 github_username:    Dr-Andai
 facebook_username:  
 instagram_username:  
-linkedin_username:
+linkedin_username: david-andai-49a560116
 
 # Add your google-analytics ID here to activate google analytics
 google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code

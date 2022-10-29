@@ -1,0 +1,43 @@
+I"� <p>A well-functioning health system ensures equitable access to essential medical products, vaccines and technologies of assured quality, safety, efficacy and cost-effectiveness, and their scientifically sound and cost-effective use. (<em>WHO framework for health systems</em>).
+The SARS-CoV-2 had pharmaceutical companies in a foot race to discover a vaccine that was safe for everyone. The efficacy of the vaccine and it being safe to use across all populations became a question that arose. With the global north leading in vaccine production, this possed the question of where does Africa stand in the space of drug discovery and clinical trials.</p>
+
+<p><img src="/img/posts/AccessToMedicine/ClinicalPart1/national-cancer-institute-aelk4Tn0vlI-unsplash.jpg" height="500px" width="100%" /><img /></p>
+
+<h2 id="what-are-clinical-trials">What are Clinical Trials?</h2>
+<p>Clinical trials are a type of research that studies new tests and treatments and evaluates their effects on human health outcomes (<em>WHO</em>).They are conducted to collect data regarding the safety and efficacy of new drug and device development. In Kenya, The Pharmacy and Poisons Board will approve protocols for clinical trials for new drugs and established guidelines for clinical trials involving drugs already registered in Kenya. Some of the Clinical trials registered can be accessed through a data repository at <a href="https://trialsearch.who.int">https://trialsearch.who.int</a>. The clinical development of a drug is classified into four key phases, with each phase requiring a different approach to trial design.</p>
+
+<ul>
+  <li><strong>Phase I</strong> Studies in this phase are exploratory and conducted in small subject populations who are selected by narrow criteria, leading to a relatively homogeneous
+population which is closely monitored.</li>
+  <li><strong>Phase II</strong> studies primary objective is to explore therapeutic efficacy in patients. An important goal for this phase is to determine the dose(s) and regimen for the phase 3 confirmatory trials.</li>
+  <li><strong>Phase III</strong> studies objective is to confirm therapeutic benefit. These studies carried out in phase 3 are often known as the ‘pivotal’ studies and complete the information required to support the proposed product information for use of the drug in the marketing authorization application (MAA).</li>
+  <li><strong>Phase IV</strong> studies, often called postmarketing surveillance trials,begins after the approval of the drug. Commonly conducted studies include additional drug–drug interaction, dose-response or safety studies, and studies designed to support the commercial use under the approved indication. (<em>Oxford Handbook of Clinical and Healthcare Research 2016</em>)</li>
+</ul>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#Data Visualization </span><span class="w">
+ </span><span class="n">plot1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Phases_data1</span><span class="p">,</span><span class="w">
+         </span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="n">count_a</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="n">fix_Phase</span><span class="p">,</span><span class="w"> </span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">round</span><span class="w"> </span><span class="p">(</span><span class="n">count_a</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">)))</span><span class="o">+</span><span class="w">
+    </span><span class="n">geom_point</span><span class="p">()</span><span class="o">+</span><span class="w">
+    </span><span class="n">geom_segment</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">fix_Phase</span><span class="p">,</span><span class="w"> </span><span class="n">yend</span><span class="o">=</span><span class="n">fix_Phase</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="o">=</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="n">xend</span><span class="o">=</span><span class="n">count_a</span><span class="p">),</span><span class="w">
+                 </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w">
+                 </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'grey'</span><span class="p">)</span><span class="o">+</span><span class="w">
+    </span><span class="n">geom_point</span><span class="p">(</span><span class="w">
+      </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w">
+      </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'#5D3FD3'</span><span class="w">
+    </span><span class="p">)</span><span class="o">+</span><span class="w">
+    </span><span class="n">geom_text</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="n">count_a</span><span class="p">),</span><span class="n">color</span><span class="o">=</span><span class="s1">'white'</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3.5</span><span class="p">)</span><span class="o">+</span><span class="w">
+    </span><span class="n">theme_light</span><span class="p">()</span><span class="o">+</span><span class="w">
+    </span><span class="n">theme</span><span class="w"> </span><span class="p">(</span><span class="w">
+      </span><span class="n">panel.grid.major</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">element_blank</span><span class="p">(),</span><span class="w">
+      </span><span class="n">panel.border</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">element_blank</span><span class="p">(),</span><span class="w">
+      </span><span class="n">axis.ticks.x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">element_blank</span><span class="p">()</span><span class="w">
+    </span><span class="p">)</span><span class="o">+</span><span class="w">
+    </span><span class="n">xlab</span><span class="p">(</span><span class="s2">""</span><span class="p">)</span><span class="o">+</span><span class="w">
+    </span><span class="n">ylab</span><span class="p">(</span><span class="s2">"Phases"</span><span class="p">)</span><span class="o">+</span><span class="w">
+    </span><span class="n">ggtitle</span><span class="p">(</span><span class="s2">"Clinical Trials Phases Distribution, Kenya"</span><span class="p">)</span><span class="o">+</span><span class="w">
+    </span><span class="n">labs</span><span class="w"> </span><span class="p">(</span><span class="n">subtitle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'01-Jan to 30-Sep 2022'</span><span class="p">)</span><span class="o">+</span><span class="w">
+    </span><span class="n">scale_x_continuous</span><span class="p">(</span><span class="n">breaks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">breaks_width</span><span class="p">(</span><span class="m">5</span><span class="p">))</span><span class="w">
+</span><span class="c1">#Data Source: trialsearch.who.int</span><span class="w">
+</span></code></pre></div></div>
+<p><img src="/img/posts/AccessToMedicine/ClinicalPart1/unnamed-chunk-5-1.png" /><img /></p>
+:ET
