@@ -1,11 +1,25 @@
-I"Ù <p>A well-functioning health system ensures equitable access to essential medical products, vaccines and technologies of assured quality, safety, efficacy and cost-effectiveness, and their scientifically sound and cost-effective use. (<em>WHO framework for health systems</em>).
-The SARS-CoV-2 had pharmaceutical companies in a foot race to discover a vaccine that was safe for everyone. The efficacy of the vaccine and it being safe to use across all populations became a question that arose. With the global north leading in vaccine production, this possed the question of where does Africa stand in the space of drug discovery and clinical trials.</p>
+I"8"<style>
+body {
+text-align: justify}
+figcaption {
+  font-style: italic;
+  padding: 2px;
+  text-align: center;
+}
+</style>
 
-<p><img src="/img/posts/AccessToMedicine/ClinicalPart1/national-cancer-institute-aelk4Tn0vlI-unsplash.jpg" height="500px" width="100%" /><img /></p>
+<p>A well-functioning health system ensures equitable access to essential medical products, vaccines and technologies of assured quality, safety, efficacy and cost-effectiveness, and their scientifically sound and cost-effective use. (<em>WHO framework for health systems</em>).
+The SARS-CoV-2 had pharmaceutical companies in a foot race to discover a vaccine that was safe for everyone. The efficacy of the vaccine and its safety across all populations became a question. With the global north leading in vaccine production, the global south had to go back to the drawing board and assess where it stands in drug discovery and clinical trials.</p>
+
+<figure>
+<img src="/img/posts/AccessToMedicine/ClinicalPart1/national-cancer-institute-aelk4Tn0vlI-unsplash.jpg" height="500px" width="100%" /><img />
+<figcaption>Technician in a laboratory</figcaption>
+</figure>
 
 <h2 id="what-are-clinical-trials">What are Clinical Trials?</h2>
-<p>Clinical trials are a type of research that studies new tests and treatments and evaluates their effects on human health outcomes (<em>WHO</em>).They are conducted to collect data regarding the safety and efficacy of new drug and device development. In Kenya, The Pharmacy and Poisons Board will approve protocols for clinical trials for new drugs and established guidelines for clinical trials involving drugs already registered in Kenya. Some of the Clinical trials registered can be accessed through a data repository at <a href="https://trialsearch.who.int">https://trialsearch.who.int</a>. The clinical development of a drug is classified into four key phases, with each phase requiring a different approach to trial design.</p>
-
+<p>Clinical trials are a type of research that studies new tests and treatments and evaluate their effects on human health outcomes (<em>WHO</em>). Clinical trials are conducted to collect data regarding the safety and efficacy of a new drug and device development. One can readily access ongoing clinical trials through a data repository at <a href="https://trialsearch.who.int">https://trialsearch.who.int</a>. The mission of the WHO International Clinical Trials Registry Platform is to ensure that a complete view of research is accessible to all those involved in healthcare decision-making. 
+In Kenya, The Pharmacy and Poisons Board will approve protocols for clinical trials for new drugs and establish guidelines for clinical trials involving drugs already registered in Kenya.<br />
+The clinical development of a drug involves four key phases, each requiring a different approach to trial design.</p>
 <ul>
   <li><strong>Phase I</strong> Studies in this phase are exploratory and conducted in small subject populations who are selected by narrow criteria, leading to a relatively homogeneous
 population which is closely monitored.</li>

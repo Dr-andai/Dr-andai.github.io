@@ -1,0 +1,40 @@
+I"_<style>
+body {
+text-align: justify}
+figcaption {
+  font-style: italic;
+  padding: 2px;
+  text-align: center;
+}
+</style>
+
+<p>In the fast-growing innovation space, healthcare systems continue to adopt current trends to leverage the broad value of technology.<br />
+<strong><em>“Our future is a race between the growing power of technology and the wisdom with which we use it.” Stephen Hawking.</em></strong><br />
+Among the vital Building blocks outlined by World Health Organisation, The health information system provides the underpinnings for decision-making. It has four essential functions:</p>
+<ol>
+  <li>data generation</li>
+  <li>compilation</li>
+  <li>analysis and synthesis</li>
+  <li>communication and use</li>
+</ol>
+
+<p>The optimism and potential benefits of technology have seen tremendous investment by many leading world technology companies in data collection, development of algorithms and AI deployment. AI technology for health has been on the rise, especially in Africa, to help address the gap in health service delivery.</p>
+<figure>
+<img src="/img/posts/HealthInformationSystem/20221101_163725.jpg" height="350px" width="100%" /><img />
+<figcaption>Files in a records office</figcaption>
+</figure>
+<p>Despite the increased startups of AI and ML technologies in health care, the possible applications of AI for health and medicine may be limited due to inadequate infrastructure outside HIC. LMICS are faced with a growing risk of digital divide due to reduced access to healthcare technologies. Health information systems in many institutions are left struggling with physical data swamps in the records office. Failure to develop all-inclusive systems breeds inequalities in data generation and the development of data gaps. <em>“Data gaps: data for particular elements or social groups that are knowingly or unknowingly missing when the policy is based on large datasets” (Giest &amp; Samuels 2020).</em></p>
+
+<p>Analysis from The Mid Term Review of Kenya Health Sector Strategic Plan (KHSSP) July 2018-JUNE 2023, reports that there has been tremendous improvement in the process of data generation, collection, storage, analysis and use of health information. This has been made possible due to more Data Quality Assurance (DQAs), increased capacity strengthening and improved partners support, which have all contributed to increased levels of timely reporting and data use.<br />
+There were reports of improved community health information systems and improvement in the number of capacity-building activities on data management at various health system levels. Additionally, both National and Sub-national levels reported the development of different information products, including reports, scorecards, dashboards, policy briefs, bulletins etc. These information products are disseminated through National health forums, online portals, and scorecards and charts.<br />
+Currently, the major sources of health information;</p>
+<ol>
+  <li><strong>Routine sources:</strong> HMIS data, Human Resources Information System (IHRIS) LMIS, Program-specific databases (TIBU etc.), Civil Registration Services data, DHIS2 for service delivery data.</li>
+  <li><strong>Population-based survey sources:</strong> Demographic Health Surveys, HIV/AIDS; KENPHIA, The Kenya TB Prevalence Survey, MIS, Sub-national surveys, STEPs survey, Household Health Expenditure and Utilization Surveys,</li>
+  <li><strong>Surveillance Data:</strong> The HIV/AIDS Epidemiological Surveillance reports, Tuberculosis surveillance data</li>
+  <li><strong>Facility assessments:</strong> The Kenya Harmonized Health Facility Assessment (KHFA) 2018, Kenya Service Provision Assessments (KSPA), Service Availability Readiness Assessment (SARAM) 2013</li>
+  <li><strong>Administrative data</strong></li>
+</ol>
+
+<p>More timely data acquisition techniques at the community level are crucial while adopting tools that can optimally balance the benefit of acquiring specific information for each individual at a particular time against the cost of acquiring that information. In doing so, we can move one step ahead in bridging the data gap and embracing technology use in healthcare in LMICS.</p>
+:ET
