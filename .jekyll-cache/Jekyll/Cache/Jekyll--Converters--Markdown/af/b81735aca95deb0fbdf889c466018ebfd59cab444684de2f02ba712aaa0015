@@ -1,0 +1,72 @@
+I"�<style>
+body {
+text-align: justify}
+</style>
+
+<p>Clinical trials can be expensive to run. Due to the high cost of running one, Big Pharma conduct most of the clinical trials. In a couple of instances, Big Pharma has been in the spotlight for influencing the results of clinical trials. A negative influence on clinical trial results and outcomes may be dangerous to the population.</p>
+
+<p>The scope of Clinical trial sponsors has actively changed over a couple of years to include independent organizations and professionals, following designs and protocols agreed upon by all parties and approved by ethical review boards. 
+Long-term phase 3 trials are vital to sponsors and aimed at providing an adequate basis for a submission for marketing approval. These studies have a long duration and are likely to show long-term or rare side effects. Studies in phase 3 are conducted across a large patient population and should include a population representative of the intended target population that will use the drug. Hence, phase 3 trials can be multicenter, occurring in different countries.<br />
+Here are some of the Sponsors of Phase 3 clinical trials that are ongoing in Kenya.</p>
+<ol>
+  <li>World Health Organization
+    <ul>
+      <li>Title: Low dose magnesium sulphate for treatment of seizures in pregnancy</li>
+      <li>Population Target size:</li>
+      <li>Condition/Disease: Pre-Eclampsia</li>
+      <li>Drug: Magnesium Sulphate</li>
+      <li>Estimated completion date: 2023</li>
+    </ul>
+  </li>
+  <li>Global Network for Womens’ and Childrens’ Health
+    <ul>
+      <li>Title: Prevention of Iron Deficiency Anemia Post-delivery (PRIORITY)</li>
+      <li>Population Target size:</li>
+      <li>Condition/Disease:  Postpartum anemia</li>
+      <li>Drug: Iv iron infusion, Oral tablets</li>
+      <li>Estimated completion date: December 1, 2025</li>
+    </ul>
+  </li>
+  <li>Hoffman La Roche
+    <ul>
+      <li>Title: Phase-III STUDY TO DETERMINE SAFETY AND EFFICACY  OF GIREDESTRANT COMPARED WITH PHYSICIANS CHOICE IN PATIENTS WITH ESTROGEN RECEPTOR POSITIVE, HER2 NEGATIVE EARLY BREAST CANCER</li>
+      <li>Population Target size:</li>
+      <li>Condition/Disease: Breast Cancer</li>
+      <li>Drug: Giredestrant, Endocrine Therapy of Physician’s Choice, LHRH Agonist</li>
+      <li>Estimated completion date: December 19, 2025</li>
+    </ul>
+  </li>
+  <li>Academic Medical Centre at the University of Amsterdam
+    <ul>
+      <li>Title: Evaluation of a new and simple diagnostic test for malaria</li>
+      <li>Population Target size: 4700</li>
+      <li>Condition/Disease: Malaria</li>
+      <li>Drug: Rapid Diagnostic Test</li>
+      <li>Estimated completion date: 2023</li>
+    </ul>
+  </li>
+  <li>Global Antibiotic Research and Development Partnership
+    <ul>
+      <li>Title: NeoSep1: a study to determine the ranking of existing and new antibiotics combinations to treat newborn babies who are in hospital with severe sepsis</li>
+      <li>Population Target size: 3060</li>
+      <li>Condition/Disease: Neonatal sepsis</li>
+      <li>Drug: Amikacin, Flomoxef and Fosfomycin</li>
+      <li>Estimated completion date: 2023
+        <div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#Data Visualization: Primary Sponsors of on going Phase 3 Clinical Trials in Kenya</span><span class="w">
+</span><span class="n">plot1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p3</span><span class="p">,</span><span class="w">
+  </span><span class="n">aes</span><span class="p">((</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reorder</span><span class="p">(</span><span class="n">Primary_sponsor</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">Target_size</span><span class="p">)),</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Target_size</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Target_size</span><span class="p">))</span><span class="o">+</span><span class="w">
+</span><span class="n">geom_bar</span><span class="p">(</span><span class="n">stat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"identity"</span><span class="p">,</span><span class="w"> </span><span class="n">show.legend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span><span class="o">+</span><span class="w">
+</span><span class="n">labs</span><span class="w"> </span><span class="p">(</span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Phase 3 Clinical Trials in Kenya"</span><span class="p">,</span><span class="w">
+   </span><span class="n">subtitle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"In 01-01-2022 to 31-10-2022"</span><span class="p">,</span><span class="w">
+   </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Primary Sponsors"</span><span class="p">,</span><span class="w">
+   </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Population Target size"</span><span class="p">)</span><span class="o">+</span><span class="w">
+</span><span class="n">theme_few</span><span class="p">()</span><span class="w">
+</span><span class="c1">#Data Source: trialsearch.who.int</span><span class="w">
+</span></code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<p><img src="img\posts\ClinicalTrials2\unnamed-chunk-5-1.png" /><img /></p>
+:ET
