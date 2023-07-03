@@ -2,7 +2,7 @@
 layout: post
 title: "Access to Medicine"
 subtitle: "Clinical Trials Part 1"
-background: '/img/posts/AccessToMedicine/ClinicalPart1/pexels-suzy-hazelwood-3652701.jpg' 
+background: '/img/posts/AccessToMedicine/ClinicalPart1/national-cancer-institute-KMvoHcB-w5g-unsplash.jpg' 
 ---
 <style>
 body {
@@ -17,7 +17,7 @@ A well-functioning health system ensures equitable access to essential medical p
 The SARS-CoV-2 had pharmaceutical companies in a foot race to discover a vaccine that was safe for everyone. The efficacy of the vaccine and its safety across all populations became a question. With the global north leading in vaccine production, the global south had to go back to the drawing board and assess where it stands in drug discovery and clinical trials.
 
 <figure>
-<img src ="/img/posts/AccessToMedicine/ClinicalPart1/national-cancer-institute-aelk4Tn0vlI-unsplash.jpg" height="500px" width="100%"><img>
+<img src ="/img/posts/AccessToMedicine/ClinicalPart1/national-cancer-institute-27KVI33BS_E-unsplash.jpg" height="500px" width="100%"><img>
 <figcaption>Technician in a laboratory</figcaption>
 </figure>
 

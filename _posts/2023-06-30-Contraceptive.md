@@ -51,13 +51,14 @@ plot2
 ```
 <img src="/img/posts/Contraceptives/contraceptive trend.png" width="100%"><img>
 
-The 2022 KDHS puts the prevalence of contraceptive use at 20% and 19% for injectables and implants, respectively, with significant uptake of implants which are increasingly overtaking the use of injectables. Tsui et al. observed that implants may be addressing contraceptive demand for limiting, as opposed to spacing, methods as across these survey settings, there is little degradation in injectable use even with rising implant use.  
-This trend is slowly being reflected across Sub-Saharan Africa, where the changing composition of contraceptive methods used by married Sub-Saharan African women, first with injectables and then with implants, is unique in the history of international family planning, where the narrative has centred on the use of IUDs, sterilisation, and pills (*Tsui et al. 2017*).  
+From the dataset, Family planning Injections and Implants are most preferred by new users. The 2022 KDHS puts the prevalence of contraceptive use at 20% and 19% for injectables and implants, respectively, with significant uptake of implants which are increasingly overtaking the use of injectables. Long Term Contraceptive methods (IUCD Insertion and Sterilization BTL) had a low uptake, with a declining trend over the years. Compared to the history of international family planning, the narrative has centered on using IUDs, sterilization, and pills (Tsui et al. 2017).  
+A user of the injectable method was likely to retain the method, denoted by a steady trend of reuptake on the injectables over the years. This trend is slowly being reflected across Sub-Saharan Africa, where the changing composition of contraceptive methods used by married Sub-Saharan African women, first with injectables and then with implants, is unique.
 
 <img src="/img/posts/Contraceptives/contraceptive trend2.png" width="100%"><img>
 
 ## Conclusion
-Enthusiasm for family planning rose decidedly after the 2012 London Summit, co-sponsored by the Bill & Melinda Gates Foundation and the UK Government, in partnership with the United Nations Population Fund, national governments, other donors, civil society, and agencies from other sectors. One of the key objectives was to address barriers to nonuse and accelerate the uptake of contraceptives in sub-Saharan Africa through the discovery and development of new technologies.
+Enthusiasm for family planning rose decidedly after the 2012 London Summit, co-sponsored by the Bill & Melinda Gates Foundation and the UK Government, in partnership with the United Nations Population Fund, national governments, other donors, civil society, and agencies from other sectors. The collaboration has enabled more than 120 million women and girls to use contraceptives.  
+The 5 years trend observed resonates with the observation that implants may be addressing contraceptive demand for limiting, as opposed to spacing. Over the years, there has been little degradation in injectable use, even with rising implant use. As advocacy for contraceptive practice, different players will come on board, contributing to the region's unique landscape of contraceptive uptake.
 
 #### *Further Reading*
 *- Kenya Demographic and Health Survey (2022 KDHS)*

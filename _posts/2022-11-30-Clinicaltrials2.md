@@ -2,7 +2,7 @@
 layout: post
 title: "Access to Medicine"
 subtitle: "Clinical Trials Part 2"
-background: '/img/posts/ClinicalTrials2/towfiqu-barbhuiya-hn2hQoALBCk-unsplash (1).jpg' 
+background: '/img/posts/ClinicalTrials2/towfiqu-barbhuiya-hn2hQoALBCk-unsplash.jpg' 
 ---
 <style>
 body {
