@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Decisions"
-subtitle: "Contraceptive Decision"
+title: "Contraceptive Decision"
+subtitle: "Decision Trees Model to Predict Contraceptive Use"
 background: '/img/posts/Contraceptives/reproductive-health-supplies-coalition-4aerIHVyBBE-unsplash.jpg'
 ---
 <style>

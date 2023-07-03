@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Access to Medicine"
-subtitle: "Trends"
+title: "Trials & Text"
+subtitle: "Text Analysis on Conditions in Clinical Trials"
 background: '/img/posts/Trials/janko-ferlic-sfL_QOnmy00-unsplash.jpg' 
 ---
 <style>
@@ -43,5 +43,5 @@ A further 12% were concerned with maternal and newborn conditions, and 6.5% were
 The scope of this post covered word frequency analysis on Clinical Trials conditions conducted in Kenya from 2018-2023. We looked into 557 entries in the ICTRP portal. Infectious diseases led the chart, with HIV reporting the highest frequency.  
 The next step will be to expand on the timeframe and depth of the dataset by covering clinical trials in SSA. We’ll also examine how the intervention type of the clinical trial relates to the condition researched. The goal will be to apply principles of Text analysis to derive insight on the landscape of clinical trials that will help drive the clinical research space in the region.
 
-### *Further Reading*
+#### *Further Reading*
 *- Edem, B., Onwuchekwa, C., Wariri, O. et al. Trends in clinical trial registration in sub-Saharan Africa between 2010 and 2020: a cross-sectional review of three clinical trial registries. Trials 22, 472 (2021). https://doi.org/10.1186/s13063-021-05423-1*

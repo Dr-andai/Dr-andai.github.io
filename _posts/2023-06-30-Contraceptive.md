@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Contraceptives"
-subtitle: "Contraceptive use"
+subtitle: "Trends on Contraceptive Uptake"
 background: '/img/posts/Contraceptives/reproductive-health-supplies-coalition-4aerIHVyBBE-unsplash.jpg'
 ---
 <style>
