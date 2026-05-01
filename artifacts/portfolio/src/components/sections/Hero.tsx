@@ -140,11 +140,11 @@ export function Hero() {
             className="flex-1 text-center lg:text-left"
           >
             {/* Research focus topic buttons */}
-            <motion.div variants={itemVariants} className="mb-8">
-              <p className="text-xs font-mono uppercase tracking-widest text-muted-foreground/60 mb-3 text-center lg:text-left">
+            <motion.div variants={itemVariants} className="mb-5 sm:mb-8">
+              <p className="text-xs font-mono uppercase tracking-widest text-muted-foreground/60 mb-2 sm:mb-3 text-left">
                 Research Focus
               </p>
-              <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
+              <div className="flex flex-wrap gap-1.5 sm:gap-3 justify-start">
                 {BRAIN_TOPICS.map(({ label, icon: Icon, href, description, color, testId }) => (
                   <a
                     key={label}
@@ -153,9 +153,9 @@ export function Hero() {
                     rel="noopener noreferrer"
                     data-testid={testId}
                     title={description}
-                    className={`inline-flex items-center gap-1.5 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full border bg-gradient-to-r text-xs sm:text-sm font-medium transition-all duration-200 hover:shadow-md hover:-translate-y-0.5 ${color}`}
+                    className={`inline-flex items-center gap-1 sm:gap-1.5 px-2 py-1 sm:px-3 sm:py-1.5 rounded-full border bg-gradient-to-r text-[10px] sm:text-xs font-medium transition-all duration-200 hover:shadow-md hover:-translate-y-0.5 ${color}`}
                   >
-                    <Icon className="w-3.5 h-3.5 flex-shrink-0" />
+                    <Icon className="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 flex-shrink-0" />
                     {label}
                   </a>
                 ))}
@@ -176,8 +176,8 @@ export function Hero() {
               Advancing brain capital in Africa through public health, neuroscience and machine learning intervention tools.
             </motion.p>
 
-            <motion.div variants={itemVariants} className="mb-6">
-              <p className="text-base text-[#085a64] dark:text-[#a4d3df] mt-2 font-medium leading-relaxed">
+            <motion.div variants={itemVariants} className="mb-6 mt-3 sm:mt-0">
+              <p className="text-xs sm:text-base text-[#085a64] dark:text-[#a4d3df] mt-0 font-medium leading-relaxed">
                 <a
                   href="https://neuroscience.uct.ac.za/mneurosc"
                   target="_blank"
