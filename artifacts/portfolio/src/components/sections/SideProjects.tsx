@@ -53,7 +53,7 @@ export function SideProjects() {
   const inView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <section id="community" className="py-24 relative overflow-hidden bg-background">
+    <section id="community" className="py-14 sm:py-24 relative overflow-hidden bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2
@@ -76,7 +76,7 @@ export function SideProjects() {
 
         <div
           ref={ref}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto"
         >
           {projects.map((project, index) => {
             const Icon = project.icon;
@@ -86,7 +86,7 @@ export function SideProjects() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="glass-card p-6 rounded-xl flex flex-col h-full hover-elevate group"
+                className="glass-card p-4 sm:p-6 rounded-xl flex flex-col h-full hover-elevate group"
               >
                 <div className="flex items-center gap-4 mb-4">
                   <div className="p-3 bg-primary/10 rounded-lg text-primary">

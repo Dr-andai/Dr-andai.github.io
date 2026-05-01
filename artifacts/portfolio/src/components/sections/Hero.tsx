@@ -59,7 +59,7 @@ function ProfilePhoto() {
 
       {/* Photo circle */}
       <div
-        className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-2 border-[#085a64]/60 shadow-[0_0_40px_rgba(8,90,100,0.3)]"
+        className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-2 border-[#085a64]/60 shadow-[0_0_40px_rgba(8,90,100,0.3)]"
         data-testid="profile-photo"
       >
         <img
@@ -119,7 +119,7 @@ export function Hero() {
   return (
     <section
       id="about"
-      className="relative min-h-screen flex items-center pt-20 pb-16 overflow-hidden"
+      className="relative min-h-screen flex items-center pt-16 pb-12 sm:pt-20 sm:pb-16 overflow-hidden"
     >
       {/* Background glow orbs */}
       <div className="absolute inset-0 z-0 opacity-20 pointer-events-none dark:opacity-30">
@@ -130,7 +130,7 @@ export function Hero() {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10" ref={ref}>
-        <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16 max-w-6xl mx-auto">
+        <div className="flex flex-col-reverse lg:flex-row items-center gap-8 sm:gap-12 lg:gap-16 max-w-6xl mx-auto">
 
           {/* LEFT — Text content */}
           <motion.div
@@ -153,7 +153,7 @@ export function Hero() {
                     rel="noopener noreferrer"
                     data-testid={testId}
                     title={description}
-                    className={`inline-flex items-center gap-2 px-4 py-2 rounded-full border bg-gradient-to-r text-sm font-medium transition-all duration-200 hover:shadow-md hover:-translate-y-0.5 ${color}`}
+                    className={`inline-flex items-center gap-1.5 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full border bg-gradient-to-r text-xs sm:text-sm font-medium transition-all duration-200 hover:shadow-md hover:-translate-y-0.5 ${color}`}
                   >
                     <Icon className="w-3.5 h-3.5 flex-shrink-0" />
                     {label}
@@ -164,7 +164,7 @@ export function Hero() {
 
             <motion.h1
               variants={itemVariants}
-              className="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-foreground mb-4"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-foreground mb-4"
             >
               Brain Health <span className="text-[#a4d3df]">×</span> Brain Skills
             </motion.h1>
@@ -200,7 +200,7 @@ export function Hero() {
 
             <motion.div
               variants={itemVariants}
-              className="flex flex-wrap gap-4 mb-12 justify-center lg:justify-start"
+              className="flex flex-wrap gap-2 sm:gap-4 mb-8 sm:mb-12 justify-center lg:justify-start"
             >
               <Button
                 size="lg"

@@ -51,7 +51,7 @@ export function Publications() {
   const inView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <section id="publications" className="py-24 relative overflow-hidden bg-background">
+    <section id="publications" className="py-14 sm:py-24 relative overflow-hidden bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2 
@@ -74,7 +74,7 @@ export function Publications() {
 
         <div 
           ref={ref}
-          className="max-w-4xl mx-auto flex flex-col gap-6"
+          className="max-w-4xl mx-auto flex flex-col gap-4 sm:gap-6"
         >
           {publications.map((pub, index) => (
             <motion.div
@@ -82,7 +82,7 @@ export function Publications() {
               initial={{ opacity: 0, x: -30 }}
               animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="glass-card p-6 md:p-8 rounded-xl flex flex-col md:flex-row gap-6 items-start hover-elevate transition-all duration-300 group"
+              className="glass-card p-4 sm:p-6 md:p-8 rounded-xl flex flex-col md:flex-row gap-4 sm:gap-6 items-start hover-elevate transition-all duration-300 group"
             >
               <div className="flex-shrink-0 pt-1 text-primary/70">
                 <BookText className="w-8 h-8" />

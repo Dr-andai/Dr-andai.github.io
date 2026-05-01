@@ -52,7 +52,7 @@ export function Skills() {
   }));
 
   return (
-    <section id="skills" className="py-24 relative overflow-hidden bg-background">
+    <section id="skills" className="py-14 sm:py-24 relative overflow-hidden bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Skills & Certifications */}
@@ -96,7 +96,7 @@ export function Skills() {
                       download={cert.label}
                       whileHover={{ scale: 1.04 }}
                       whileTap={{ scale: 0.97 }}
-                      className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all ${categoryStyles[category].button}`}
+                      className={`inline-flex items-center gap-1.5 px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg text-xs sm:text-sm font-medium transition-all ${categoryStyles[category].button}`}
                     >
                       <FileDown className="w-4 h-4 shrink-0" />
                       {cert.label}
