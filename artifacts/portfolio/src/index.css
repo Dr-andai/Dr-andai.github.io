@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;600;700;800&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 @plugin "@tailwindcss/typography";
@@ -87,7 +87,7 @@
   --input: 214 32% 91%;
   --ring: 186 85% 21%;
 
-  --app-font-sans: 'Inter', sans-serif;
+  --app-font-sans: 'Plus Jakarta Sans', sans-serif;
   --app-font-heading: 'Manrope', sans-serif;
   --app-font-serif: Georgia, serif;
   --app-font-mono: 'JetBrains Mono', monospace;
@@ -95,46 +95,45 @@
 }
 
 .dark {
-  --button-outline: rgba(255,255,255, .10);
-  --badge-outline: rgba(255,255,255, .05);
+  --button-outline: rgba(255,255,255, .12);
+  --badge-outline: rgba(255,255,255, .06);
   --opaque-button-border-intensity: 9;
-  --elevate-1: rgba(255,255,255, .04);
-  --elevate-2: rgba(255,255,255, .09);
+  --elevate-1: rgba(255,255,255, .05);
+  --elevate-2: rgba(255,255,255, .10);
 
-  /* Primary background: #1a1428 */
-  --background: 258 33% 12%;
-  /* Text primary: #f8f9fa */
-  --foreground: 210 17% 98%;
-  --border: 263 35% 30%;
-  /* Card/surface: #2f2145 */
-  --card: 263 35% 20%;
-  --card-foreground: 210 17% 98%;
-  --card-border: 263 35% 30%;
-  
-  --popover: 263 35% 20%;
-  --popover-foreground: 210 17% 98%;
-  --popover-border: 263 35% 30%;
-  
-  /* Teal accent: #085a64 */
-  --primary: 186 85% 21%;
-  --primary-foreground: 210 17% 98%;
-  
-  /* Text secondary: #cbd5e1 */
-  --secondary: 263 35% 30%;
-  --secondary-foreground: 213 27% 84%;
-  
-  --muted: 263 35% 30%;
-  --muted-foreground: 213 27% 84%;
-  
-  /* Sky blue highlight: #a4d3df */
-  --accent: 192 45% 76%;
-  --accent-foreground: 258 33% 12%;
-  
+  /* Deeper background for more richness */
+  --background: 258 38% 8%;
+  --foreground: 210 20% 97%;
+  --border: 263 30% 32%;
+
+  /* Cards: noticeably lifted off the background */
+  --card: 263 36% 17%;
+  --card-foreground: 210 20% 97%;
+  --card-border: 263 32% 30%;
+
+  --popover: 263 36% 17%;
+  --popover-foreground: 210 20% 97%;
+  --popover-border: 263 32% 30%;
+
+  /* Primary: brightened teal so it's legible as text */
+  --primary: 186 72% 32%;
+  --primary-foreground: 210 20% 97%;
+
+  --secondary: 263 30% 26%;
+  --secondary-foreground: 213 25% 82%;
+
+  --muted: 263 30% 24%;
+  --muted-foreground: 215 18% 62%;
+
+  /* Sky blue highlight: slightly richer */
+  --accent: 192 52% 70%;
+  --accent-foreground: 258 38% 8%;
+
   --destructive: 0 62% 30%;
-  --destructive-foreground: 210 17% 98%;
-  
-  --input: 263 35% 30%;
-  --ring: 192 45% 76%;
+  --destructive-foreground: 210 20% 97%;
+
+  --input: 263 30% 26%;
+  --ring: 192 52% 70%;
 }
 
 @layer base {
@@ -143,6 +142,7 @@
   }
   body {
     @apply font-sans antialiased bg-background text-foreground selection:bg-accent selection:text-accent-foreground;
+    background-image: radial-gradient(ellipse 90% 40% at 50% 0%, hsla(263, 50%, 22%, 0.5), transparent);
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading tracking-tight;
@@ -153,15 +153,8 @@
 }
 
 .glass-card {
-  backdrop-filter: blur(12px);
-  background: rgba(47, 33, 69, 0.6);
-  border: 1px solid rgba(164, 211, 223, 0.12);
-}
-.dark .glass-card {
-  background: rgba(47, 33, 69, 0.6);
-  border: 1px solid rgba(164, 211, 223, 0.12);
-}
-.light .glass-card {
-  background: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(16px);
+  background: linear-gradient(135deg, rgba(55, 38, 82, 0.72), rgba(28, 18, 48, 0.80));
+  border: 1px solid rgba(164, 211, 223, 0.16);
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(164, 211, 223, 0.08);
 }
