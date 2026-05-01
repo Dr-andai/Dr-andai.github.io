@@ -85,11 +85,11 @@ export function Experience() {
   const eduInView = useInView(eduRef, { once: true, margin: "-80px" });
 
   return (
-    <section id="experience" className="py-24 relative overflow-hidden bg-background">
+    <section id="experience" className="py-14 sm:py-24 relative overflow-hidden bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section heading */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -113,7 +113,7 @@ export function Experience() {
           <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-border -translate-x-1/2 hidden md:block" />
           <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-border md:hidden" />
 
-          <div className="space-y-12">
+          <div className="space-y-8 sm:space-y-12">
             {workExperiences.map((exp, index) => (
               <TimelineItem key={index} experience={exp} index={index} />
             ))}
@@ -121,7 +121,7 @@ export function Experience() {
         </div>
 
         {/* Education */}
-        <div className="max-w-4xl mx-auto mt-20" ref={eduRef}>
+        <div className="max-w-4xl mx-auto mt-14 sm:mt-20" ref={eduRef}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={eduInView ? { opacity: 1, y: 0 } : {}}
@@ -169,7 +169,7 @@ function TimelineItem({ experience, index }: { experience: WorkExp; index: numbe
   const isEven = index % 2 === 0;
 
   const card = (
-    <div className="glass-card p-6 rounded-xl hover-elevate transition-all duration-300">
+    <div className="glass-card p-4 sm:p-6 rounded-xl hover-elevate transition-all duration-300">
       <div className="flex items-center gap-2 mb-2 text-primary">
         <Briefcase className="w-4 h-4" />
         <span className="text-sm font-mono">{experience.period}</span>
@@ -200,7 +200,7 @@ function TimelineItem({ experience, index }: { experience: WorkExp; index: numbe
       {/* Center dot */}
       <div className="absolute left-6 md:left-1/2 w-4 h-4 rounded-full bg-primary border-4 border-background -translate-x-1/2 z-10 mt-6" />
 
-      <div className={`w-full md:w-1/2 pl-16 md:pl-0 py-2 ${isEven ? "md:pl-12 md:pr-4" : "md:pr-12 md:pl-4"}`}>
+      <div className={`w-full md:w-1/2 pl-12 sm:pl-16 md:pl-0 py-2 ${isEven ? "md:pl-12 md:pr-4" : "md:pr-12 md:pl-4"}`}>
         {card}
       </div>
 

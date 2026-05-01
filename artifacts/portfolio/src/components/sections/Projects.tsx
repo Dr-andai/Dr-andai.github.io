@@ -52,7 +52,7 @@ export function Projects() {
   const inView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <section id="projects" className="py-24 relative overflow-hidden bg-background">
+    <section id="projects" className="py-14 sm:py-24 relative overflow-hidden bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="text-center mb-6">
@@ -87,7 +87,7 @@ export function Projects() {
 
         <div
           ref={ref}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto"
         >
           {projects.map((project, index) => (
             <motion.div
@@ -138,7 +138,7 @@ function ProjectCard({ project }: { project: typeof projects[number] }) {
       style={{ perspective: 1000 }}
       className="h-full relative group"
     >
-      <div className="glass-card h-full p-6 rounded-xl flex flex-col transition-all duration-300 border-b-2 border-b-transparent hover:border-b-primary group-hover:shadow-[0_10px_30px_rgba(8,90,100,0.2)]">
+      <div className="glass-card h-full p-4 sm:p-6 rounded-xl flex flex-col transition-all duration-300 border-b-2 border-b-transparent hover:border-b-primary group-hover:shadow-[0_10px_30px_rgba(8,90,100,0.2)]">
         <div className="flex justify-between items-start mb-4">
           <div className="p-3 bg-primary/10 rounded-lg text-primary">
             <Icon className="w-6 h-6" />

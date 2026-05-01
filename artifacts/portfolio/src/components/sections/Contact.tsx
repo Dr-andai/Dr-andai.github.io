@@ -8,7 +8,7 @@ export function Contact() {
   const inView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <section id="contact" className="py-24 relative overflow-hidden bg-background">
+    <section id="contact" className="py-14 sm:py-24 relative overflow-hidden bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <motion.div 
@@ -16,13 +16,13 @@ export function Contact() {
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.6 }}
-            className="glass-card rounded-2xl p-8 md:p-12 relative overflow-hidden"
+            className="glass-card rounded-2xl p-5 sm:p-8 md:p-12 relative overflow-hidden"
           >
             {/* Decorative elements */}
             <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/3 w-64 h-64 bg-primary/20 rounded-full blur-[80px] pointer-events-none" />
             <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/3 w-64 h-64 bg-accent/20 rounded-full blur-[80px] pointer-events-none" />
 
-            <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 items-center">
               <div>
                 <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground mb-4">
                   Let's connect.

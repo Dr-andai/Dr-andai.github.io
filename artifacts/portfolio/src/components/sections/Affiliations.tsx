@@ -32,7 +32,7 @@ export function Affiliations() {
 
         <div 
           ref={ref}
-          className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto"
+          className="flex flex-wrap justify-center gap-2 sm:gap-4 max-w-5xl mx-auto"
         >
           {affiliations.map((org, index) => (
             <motion.div
@@ -46,7 +46,7 @@ export function Affiliations() {
                 borderColor: "hsl(var(--primary))",
                 boxShadow: "0 0 20px rgba(8,90,100,0.3)"
               }}
-              className="px-5 py-2.5 rounded-full border border-border/50 bg-card/30 text-muted-foreground font-medium transition-all duration-300 cursor-default grayscale hover:grayscale-0"
+              className="px-3 py-1.5 sm:px-5 sm:py-2.5 text-sm rounded-full border border-border/50 bg-card/30 text-muted-foreground font-medium transition-all duration-300 cursor-default grayscale hover:grayscale-0"
             >
               {org}
             </motion.div>
