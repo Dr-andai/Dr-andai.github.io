@@ -1,0 +1,221 @@
+Dr. David Andai — Portfolio Site Specification
+================================================
+
+1. PURPOSE
+----------
+Create a futuristic, minimalistic portfolio website to showcase Dr. David Andai's 
+professional journey as a Medical Doctor, Public Health Researcher, and Machine 
+Learning Practitioner focused on neurodegenerative diseases in Africa. The site 
+should position him as an emerging leader at the intersection of brain health, 
+neuroscience, and AI-driven public health solutions, highlighting academic 
+achievements, African-centered research, and open-science contributions.
+
+
+2. CORE SECTIONS
+----------------
+
+HERO / OVERVIEW
+• Name + tagline:
+  "Medical Doctor × Neuroscience × Machine Learning
+   UCT MNeuroSc | MINDS Scholar
+
+• Subline:
+  "Advancing brain health equity in Africa through neuroscience, 
+   public health, and machine learning intervention tools."
+
+• Key CTAs:
+  Download CV (PDF) • View Neural Dome Projects • Collaborate on Research
+
+• Metrics line:
+  MINDS Scholar 2025/2026 • Early Career Researcher Award AKU 2025 • 
+  4 Peer-Reviewed Publications • Co-founder, Afiadata
+
+
+SKILLS & EXPERTISE
+Pill-style chips with hover micro-interactions:
+Public Health Policy • Neuroepidemiology • Machine Learning • Data Visualization • 
+Research • R/Python/Shiny • Qualitative & Quantitative Methods • 
+Brain MRI Analysis • Statistics
+
+
+EXPERIENCE TIMELINE
+• Research Assistant, Brain & Mind Institute, Aga Khan University | Nairobi, Kenya 
+  (Jul 2024 – Jan 2026)
+  → Female Brain Health & Endocrine Research • Brain Health Resilience Kenya • 
+    UZIMA Mental Health Data Science
+
+• Freelance Project Lead – Africa Brain Health Dashboard, Global Brain Health Institute 
+  (Jun 2024 – Feb 2025)
+  → End-to-end Shiny dashboard development for brain health indicators across Africa
+
+• Research Data Analyst Intern, Brain & Mind Institute, AKU (Feb 2024 – Jun 2024)
+  → Suicide prevention dashboards (Tableau) • ML models for mental health prediction
+
+• Medical Officer Resident, Equity Afia Clinic | Nairobi (Sep 2023 – Jan 2024)
+
+• Medical Intern, Kerugoya County Referral Hospital | Kenya (Jul 2022 – Jul 2023)
+
+• Education: 
+  MBChB, JKUAT (2022) • MSc International Public Health, LJMU/UNICAF (2025) • 
+  MSc Neuroscience (ongoing), University of Cape Town
+
+
+RESEARCH & FLAGSHIP PROJECTS — NEURAL DOME PORTFOLIO
+🧠 Project One: Exposome Computational Modeling (Ongoing)
+   Scoping review on community-based interventions for brain health determinants 
+   across the African life course.
+
+🗂️ Project Two: Dementia Risk Data Cards (Ongoing)
+   Linking Sub-Saharan dementia risk factors, public perception, and management 
+   approaches to IHME epidemiology trends — visualized as static data cards.
+
+🌍 Project Three: Neurodegenerative Info Sheets (Ongoing)
+   East African prevalence data cards for conditions like dementia, with hospital 
+   vs. community prevalence comparisons across countries.
+
+📊 Project Four: Africa Exposome Data Repository (Ongoing)
+   Frontend data cards showing annual % changes, policy context, and sources for 
+   variables: air pollution, green spaces, climate disasters, GDP, gender equality, 
+   migration, and more.
+
+🤖 Project Five: Modeling Hub (Ongoing)
+   • Epidemiological: GAMs, One Health SIR simulations, physics-inspired variational methods
+   • Machine Learning: Brain Age Gaps (BAGs), feature selection, gradient boosting, 
+     LLMs/graph networks for vascular dementia research
+
+
+PUBLICATIONS
+• Andai, D. et al. (2026). Evaluating Machine Learning Models in Predicting COVID-19 
+  Vaccine Uptake in Kenya. J. Kenya Assoc. Physicians. 
+  https://doi.org/10.4314/jkap.v8i1.5
+
+• Aballa, A. et al. (2025). Depressive Symptoms Among Kenyan Health Care Workers. 
+  JAMA Psychiatry. https://doi.org/10.1001/jamapsychiatry.2025.3727
+
+• Mostert, C.M., Ajalo, C., & Andai, D. (2025). Reforming pensions in Africa: 
+  Addressing coverage, payout disparities, and dementia outcomes. Alzheimer's & Dementia. 
+  https://doi.org/10.1002/alz.70300
+
+• Mostert, C.M. et al. (2025). Investing in equitable healthy aging: Why Africa must 
+  reform social pension schemes. Alzheimer's & Dementia. 
+  https://doi.org/10.1002/alz.14527
+
+• Simba, J.M. et al. (2023). Preventable deaths from respiratory diseases in children 
+  in LMICs. European Respiratory Society. 
+  https://doi.org/10.1183/2312508X.10005022
+
+
+TALKS & THOUGHT LEADERSHIP
+• MINDS Scholars Feature: Pan-African Leadership in Development Studies
+• CME Sessions on Mental Health in the Workplace (Equity Afia)
+• Virtual Training on Data Tools for Brain Health Stakeholders (Global Brain Health Institute)
+• Undergraduate Mentorship in Medical Research & Data Science
+
+
+SIDE PROJECTS & COMMUNITY
+• Co-founder, Afiadata Kenya — Medical data science community: https://afiadata.org/
+• Afiadata YouTube: https://www.youtube.com/@AfiadataKe
+• Shock Lab Fellow: https://shocklab.net/students/david-andai/
+• Neuroscience Blog: https://andaidavid.medium.com/
+• Data Blog: https://dr-andai.github.io/
+
+
+AWARDS & CERTIFICATIONS
+• Mandela Institute for Development Studies (MINDS) Scholarship 2025/2026
+• Early Career Researcher Award, Aga Khan University (2025)
+• Computational Neuroscience & Linear Algebra for ML (Coursera, 2024–2025)
+
+
+PRESS & PARTNERS
+Logo strip (Aga Khan University, Global Brain Health Institute, Liverpool John Moores 
+University, University of Cape Town, Afiadata, Shock Lab, MINDS)
+• Grayscale → color on hover
+
+
+CONTACT
+• Email: andaidavid8@gmail.com
+• LinkedIn: linkedin.com/in/david-andai-md-msc-49a560116
+• GitHub: github.com/Dr-andai
+• Portfolio Calendar & Social Links
+• Downloadable CV (PDF)
+
+
+3. VISUAL STYLE
+---------------
+References: African futurism meets scientific minimalism — Afro-tech elegance + Stripe-level clarity
+
+COLORS
+• Primary:        #2f2145 (deep indigo — trust, depth, African night sky)
+• Secondary:      #085a64 (teal — growth, health, innovation)
+• Accent/Light:   #a4d3df (soft sky blue — clarity, hope, data visualization)
+• Text Primary:   #f8f9fa (off-white for dark mode)
+• Text Secondary: #cbd5e1 (light grey)
+• Background:     #1a1428 (dark indigo base) or #f8fafc (light mode alternative)
+• Highlight/CTA:  #085a64 with #a4d3df hover glow
+
+FONTS
+• Headings: Inter or Manrope (clean, modern, highly readable)
+• Body: Inter / System Sans
+• Code/Metrics: JetBrains Mono or Fira Code
+
+LAYOUT & EFFECTS
+• Grid-based, mobile-first, generous whitespace
+• Subtle glassmorphism on project cards with #2f2145 backdrop blur
+• Floating data visualization elements with soft parallax on scroll
+• Data cards with gentle tilt on hover (Framer Motion)
+• Chip hover: #a4d3df glow + subtle scale-up
+• Section transitions: fade/slide with staggered children
+
+ANIMATIONS
+• Framer Motion: fade-in on view, chip hover glow, project card tilt, timeline scroll progress
+• Micro-interactions: skill chip pulse on load, CTA button ripple
+• Loading: animated brain/network motif in #085a64
+
+
+4. TECHNICAL BUILD
+------------------
+• Framework:      Next.js (App Router) + TypeScript
+• Styling:        Tailwind CSS + shadcn/ui components
+• Animations:     Framer Motion
+• Content:        MDX/Contentlayer for projects, publications, and blog posts
+• Data Viz:       D3.js or Chart.js for interactive exposome cards (optional static fallback)
+• Performance:    Lighthouse ≥95, next/image optimization, font subsetting, lazy loading
+• SEO/A11y:       WCAG 2.2 AA compliance, schema.org metadata (Person, ScholarlyArticle, Dataset)
+• Hosting:        Vercel with custom domain (e.g., davidandai.com)
+• Analytics:      Plausible or Umami (privacy-first)
+
+
+5. DELIVERABLES
+---------------
+✅ Fully responsive build (desktop, tablet, mobile)
+✅ Modular "Data Card" component for Neural Dome projects
+✅ CMS/MDX collections for publications, projects, talks, and blog posts
+✅ Sitemap.xml + robots.txt + schema markup
+✅ Print-friendly /cv page + downloadable /cv.pdf
+✅ Partner/affiliation logo section (grayscale → color on hover)
+✅ Dark/Light mode toggle with system preference detection
+✅ Optional: Embedded Shiny dashboard iframe for Africa Brain Health project
+
+
+ONE-PARAGRAPH DEVELOPER BRIEF
+-----------------------------
+Please build a futuristic, minimalistic portfolio website for Dr. David Andai — 
+Medical Doctor, Public Health Researcher, and Machine 
+Learning focused on brain health equity in Africa; MINDS Scholar. Visuals should reflect African futurism meets 
+scientific clarity: deep indigo (#2f2145) backgrounds, teal (#085a64) accents, and 
+soft sky-blue (#a4d3df) highlights with subtle glassmorphism and data-driven 
+micro-interactions. Core sections include: Hero Overview, Skills, Experience Timeline, 
+Neural Dome Research Projects (Exposome Modeling, Dementia Data Cards, Africa Exposome 
+Repo, ML Modeling Hub), Publications, Talks, Side Projects (Afiadata, Shock Lab), 
+Awards, and Contact. Prominently display: MINDS Scholar 2025/2026 • Early Career 
+Researcher Award AKU 2025 • 4 Peer-Reviewed Publications. Use Next.js + Tailwind + 
+Framer Motion, with WCAG-AA compliance, schema.org metadata, and Lighthouse ≥95. 
+Ensure content is easily updatable via MDX and deploy on Vercel with custom domain. 
+Prioritize modular "data card" components for the Neural Dome portfolio to showcase 
+African neuroepidemiology work without heavy dashboard dependencies.
+
+
+---
+Generated for: Dr. David Wamacho Andai, MBChB, MSc
+Contact: andaidavid8@gmail.com | github.com/Dr-andai
+Last Updated: May 2026
