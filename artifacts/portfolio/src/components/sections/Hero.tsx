@@ -6,15 +6,13 @@ import { Button } from "@/components/ui/button";
 
 const MINDS_LINKEDIN_URL = "https://www.linkedin.com/posts/mandela-institute-for-development-studies_mindsscholars-mindsafrica-panafricanleadership-activity-7440342407285534720-twBA?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAABzqBLYBF2WsHK8P3qUKKWcpKsYI-FSLp84";
 const MY_LINKEDIN_URL = "https://www.linkedin.com/in/david-andai-md-msc-49a560116";
-const WEF_REPORT_PDF = "/stronger-brains-wef-2026.pdf";
-
 const HEADSHOT_PATH = "/headshot.jpg";
 
 const BRAIN_TOPICS = [
   {
     label: "Brain Health Burden",
     icon: Brain,
-    href: `${WEF_REPORT_PDF}#page=7`,
+    href: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10949203/",
     description: "24% of global disease burden from MNS disorders",
     color: "from-rose-500/10 to-rose-500/5 border-rose-400/30 text-rose-600 dark:text-rose-400 hover:border-rose-400/60 hover:bg-rose-500/10",
     testId: "link-brain-health-burden",
@@ -22,7 +20,7 @@ const BRAIN_TOPICS = [
   {
     label: "Brain Health Determinants",
     icon: TrendingUp,
-    href: `${WEF_REPORT_PDF}#page=8`,
+    href: "https://www.who.int/publications/i/item/9789240054561",
     description: "Modifiable risk & protective factors across the life course",
     color: "from-sky-500/10 to-sky-500/5 border-sky-400/30 text-sky-600 dark:text-sky-400 hover:border-sky-400/60 hover:bg-sky-500/10",
     testId: "link-brain-health-determinants",
@@ -30,7 +28,7 @@ const BRAIN_TOPICS = [
   {
     label: "Brain Capital",
     icon: Lightbulb,
-    href: `${WEF_REPORT_PDF}#page=14`,
+    href: "https://www.mckinsey.com/mhi/our-insights/the-human-advantage-stronger-brains-in-the-age-of-ai#/",
     description: "Brain health + brain skills as an economic priority",
     color: "from-emerald-500/10 to-emerald-500/5 border-emerald-400/30 text-emerald-600 dark:text-emerald-400 hover:border-emerald-400/60 hover:bg-emerald-500/10",
     testId: "link-brain-capital",
