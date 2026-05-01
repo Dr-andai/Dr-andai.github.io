@@ -77,10 +77,10 @@ function ProfilePhoto() {
         href={MINDS_LINKEDIN_URL}
         target="_blank"
         rel="noopener noreferrer"
-        className="absolute bottom-4 right-0 sm:right-[-8px] bg-[#085a64]/90 backdrop-blur-md border border-[#a4d3df]/20 rounded-xl px-3 py-2 shadow-lg hover:bg-[#085a64] hover:border-[#a4d3df]/40 transition-colors"
+        className="absolute bottom-3 right-0 sm:bottom-4 sm:right-[-8px] bg-[#085a64]/90 backdrop-blur-md border border-[#a4d3df]/20 rounded-xl px-2 py-1.5 sm:px-3 sm:py-2 shadow-lg hover:bg-[#085a64] hover:border-[#a4d3df]/40 transition-colors"
       >
-        <p className="text-[10px] font-mono text-[#a4d3df]/70 uppercase tracking-widest">MINDS Scholar</p>
-        <p className="text-sm font-bold text-[#f8f9fa]">2026</p>
+        <p className="text-[8px] sm:text-[10px] font-mono text-[#a4d3df]/70 uppercase tracking-widest">MINDS Scholar</p>
+        <p className="text-xs sm:text-sm font-bold text-[#f8f9fa]">2026</p>
       </a>
     </motion.div>
   );
@@ -171,7 +171,7 @@ export function Hero() {
 
             <motion.p
               variants={itemVariants}
-              className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-2xl leading-relaxed mx-auto lg:mx-0"
+              className="text-sm sm:text-lg text-muted-foreground mb-6 sm:mb-8 max-w-2xl leading-relaxed mx-auto lg:mx-0"
             >
               Advancing brain capital in Africa through public health, neuroscience and machine learning intervention tools.
             </motion.p>
@@ -203,59 +203,61 @@ export function Hero() {
               className="flex flex-wrap gap-2 sm:gap-4 mb-8 sm:mb-12 justify-center lg:justify-start"
             >
               <Button
-                size="lg"
-                className="hover-elevate bg-primary text-primary-foreground hover:bg-primary/90 transition-all hover:shadow-[0_0_20px_rgba(164,211,223,0.4)] gap-2 group"
+                size="sm"
+                className="hover-elevate bg-primary text-primary-foreground hover:bg-primary/90 transition-all hover:shadow-[0_0_20px_rgba(164,211,223,0.4)] gap-1.5 group sm:size-lg sm:gap-2"
                 asChild
                 data-testid="button-download-cv"
               >
                 <a href="/cv.pdf" download>
-                  <Download className="w-4 h-4 group-hover:-translate-y-1 transition-transform" />
-                  Download CV
+                  <Download className="w-3.5 h-3.5 group-hover:-translate-y-1 transition-transform sm:w-4 sm:h-4" />
+                  <span>Download CV</span>
                 </a>
               </Button>
               <Button
-                size="lg"
+                size="sm"
                 variant="outline"
-                className="hover-elevate gap-2 border-[#085a64]/50 text-[#085a64] dark:text-[#a4d3df] hover:bg-[#085a64]/10"
+                className="hover-elevate gap-1.5 border-[#085a64]/50 text-[#085a64] dark:text-[#a4d3df] hover:bg-[#085a64]/10 sm:gap-2"
                 asChild
                 data-testid="link-medical-licence"
               >
                 <a href="https://osp.kmpdc.go.ke/auth?type=practice_licence&id=7022c6025eb2fe6e46db24fd1aa9662e" target="_blank" rel="noopener noreferrer">
-                  <ShieldCheck className="w-4 h-4" />
-                  Medical Licence
+                  <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                  <span>Medical Licence</span>
                 </a>
               </Button>
               <Button
-                size="lg"
+                size="sm"
                 variant="outline"
-                className="hover-elevate gap-2"
+                className="hover-elevate gap-1.5 sm:gap-2"
                 asChild
                 data-testid="link-neural-dome"
               >
-                <a href="#projects">Neural Dome Projects</a>
+                <a href="#projects">
+                  <span>Neural Dome Projects</span>
+                </a>
               </Button>
               <Button
-                size="lg"
+                size="sm"
                 variant="ghost"
-                className="hover-elevate gap-2"
+                className="hover-elevate gap-1.5 sm:gap-2"
                 asChild
                 data-testid="link-collaborate-email"
               >
                 <a href="mailto:andaidavid8@gmail.com">
-                  <Mail className="w-4 h-4" />
-                  Collaborate
+                  <Mail className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                  <span className="hidden sm:inline">Collaborate</span>
                 </a>
               </Button>
               <Button
-                size="lg"
+                size="sm"
                 variant="ghost"
-                className="hover-elevate gap-2"
+                className="hover-elevate gap-1.5 sm:gap-2"
                 asChild
                 data-testid="link-collaborate-linkedin"
               >
                 <a href={MY_LINKEDIN_URL} target="_blank" rel="noopener noreferrer">
-                  <FaLinkedin className="w-4 h-4" />
-                  Connect on LinkedIn
+                  <FaLinkedin className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                  <span className="hidden sm:inline">Connect on LinkedIn</span>
                 </a>
               </Button>
             </motion.div>
