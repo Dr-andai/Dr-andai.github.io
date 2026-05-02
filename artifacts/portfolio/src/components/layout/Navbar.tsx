@@ -21,6 +21,7 @@ export function Navbar() {
 
   const navLinks = [
     { name: "About", href: "#about" },
+    { name: "Experience", href: "#experience" },
     { name: "Projects", href: "#projects" },
     { name: "Publications", href: "#publications" },
     { name: "Contact", href: "#contact" },
@@ -100,7 +101,7 @@ export function Navbar() {
                   initial={{ opacity: 0, x: -12 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.18, delay: i * 0.05 }}
-                  className="flex items-center gap-3 px-3 py-4 rounded-xl text-lg font-medium text-foreground hover:bg-primary/10 hover:text-primary active:bg-primary/20 transition-colors border-b border-border/20 last:border-0"
+                  className="flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-foreground hover:bg-primary/10 hover:text-primary active:bg-primary/20 transition-colors border-b border-border/20 last:border-0"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-primary/50 flex-shrink-0" />
                   {link.name}
