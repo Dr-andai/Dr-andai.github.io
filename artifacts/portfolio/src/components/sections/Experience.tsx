@@ -85,7 +85,7 @@ export function Experience() {
   const eduInView = useInView(eduRef, { once: true, margin: "-80px" });
 
   return (
-    <section id="experience" className="py-14 sm:py-24 relative overflow-hidden bg-background">
+    <section id="experience" className="py-14 sm:py-24 relative overflow-hidden bg-background scroll-mt-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section heading */}
@@ -95,7 +95,7 @@ export function Experience() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground"
+            className="text-xl sm:text-3xl font-bold tracking-tight text-foreground"
           >
             Experience & Education
           </motion.h2>
@@ -129,7 +129,7 @@ export function Experience() {
             className="flex items-center gap-3 mb-8"
           >
             <GraduationCap className="w-6 h-6 text-primary shrink-0" />
-            <h3 className="text-2xl font-bold text-foreground">Education</h3>
+            <h3 className="text-base sm:text-2xl font-bold text-foreground">Education</h3>
             <div className="flex-1 h-px bg-border/40" />
           </motion.div>
 
@@ -145,11 +145,11 @@ export function Experience() {
                 <div className="shrink-0 w-2 h-2 rounded-full bg-primary mt-2 hidden sm:block" />
                 <div className="flex-1">
                   <div className="flex flex-wrap items-baseline justify-between gap-2 mb-1">
-                    <span className="text-base font-bold text-foreground">{edu.degree}</span>
+                    <span className="text-xs sm:text-base font-bold text-foreground">{edu.degree}</span>
                     <span className="text-xs font-mono text-primary/70">{edu.year}</span>
                   </div>
-                  <p className="text-sm font-semibold text-[#085a64] dark:text-[#a4d3df] mb-1">{edu.institution}</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{edu.note}</p>
+                  <p className="text-xs sm:text-sm font-semibold text-[#085a64] dark:text-[#a4d3df] mb-1">{edu.institution}</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{edu.note}</p>
                 </div>
               </motion.div>
             ))}
@@ -172,15 +172,15 @@ function TimelineItem({ experience, index }: { experience: WorkExp; index: numbe
     <div className="glass-card p-4 sm:p-6 rounded-xl hover-elevate transition-all duration-300">
       <div className="flex items-center gap-2 mb-2 text-primary">
         <Briefcase className="w-4 h-4" />
-        <span className="text-sm font-mono">{experience.period}</span>
+        <span className="text-xs sm:text-sm font-mono">{experience.period}</span>
       </div>
-      <h3 className="text-xl font-bold text-foreground mb-1">{experience.title}</h3>
-      <h4 className="text-sm font-semibold text-[#085a64] dark:text-[#a4d3df] mb-3">
+      <h3 className="text-sm sm:text-xl font-bold text-foreground mb-1">{experience.title}</h3>
+      <h4 className="text-xs sm:text-sm font-semibold text-[#085a64] dark:text-[#a4d3df] mb-3">
         {experience.organization} · {experience.location}
       </h4>
       <ul className="space-y-1.5">
         {experience.bullets.map((b, i) => (
-          <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground leading-relaxed">
+          <li key={i} className="flex items-start gap-2 text-xs sm:text-sm text-muted-foreground leading-relaxed text-justify">
             <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary/50 shrink-0" />
             <span>{b}</span>
           </li>

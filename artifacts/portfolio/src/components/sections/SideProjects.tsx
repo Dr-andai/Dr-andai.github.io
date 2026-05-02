@@ -53,7 +53,7 @@ export function SideProjects() {
   const inView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <section id="community" className="py-14 sm:py-24 relative overflow-hidden bg-background">
+    <section id="community" className="py-14 sm:py-24 relative overflow-hidden bg-background scroll-mt-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2
@@ -61,7 +61,7 @@ export function SideProjects() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground"
+            className="text-xl sm:text-3xl font-bold tracking-tight text-foreground"
           >
             Community Contribution
           </motion.h2>
@@ -93,13 +93,13 @@ export function SideProjects() {
                     <Icon className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
+                    <h3 className="text-sm sm:text-xl font-bold text-foreground group-hover:text-primary transition-colors">
                       {project.title}
                     </h3>
-                    <span className="text-sm font-mono text-accent">{project.role}</span>
+                    <span className="text-xs sm:text-sm font-mono text-accent">{project.role}</span>
                   </div>
                 </div>
-                <p className="text-muted-foreground mb-6 flex-grow text-sm leading-relaxed">
+                <p className="text-muted-foreground mb-6 flex-grow text-xs sm:text-sm leading-relaxed">
                   {project.description}
                 </p>
                 <Button variant="outline" className="w-full gap-2 group-hover:bg-primary group-hover:text-primary-foreground transition-all" asChild>

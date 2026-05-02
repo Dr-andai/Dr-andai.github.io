@@ -8,7 +8,7 @@ export function Contact() {
   const inView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <section id="contact" className="py-14 sm:py-24 relative overflow-hidden bg-background">
+    <section id="contact" className="py-14 sm:py-24 relative overflow-hidden bg-background scroll-mt-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <motion.div 
@@ -24,11 +24,11 @@ export function Contact() {
 
             <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 items-center">
               <div>
-                <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground mb-4">
+                <h2 className="text-xl sm:text-3xl font-bold tracking-tight text-foreground mb-4">
                   Let's connect.
                 </h2>
                 <div className="w-16 h-1 bg-primary rounded-full mb-6" />
-                <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+                <p className="text-muted-foreground text-xs sm:text-lg leading-relaxed mb-8">
                   Open to collaboration on brain health research, health data science, artificial intelligence and machine learning projects.
                 </p>
                 <div className="flex flex-wrap gap-4">
@@ -48,22 +48,22 @@ export function Contact() {
               </div>
 
               <div className="flex flex-col gap-4">
-                <a 
-                  href="mailto:andaidavid8@gmail.com" 
+                <a
+                  href="mailto:andaidavid8@gmail.com"
                   className="flex items-center gap-4 p-4 rounded-xl border border-border/50 bg-background/50 hover:bg-accent/10 hover:border-accent/30 transition-all group"
                 >
                   <div className="p-3 rounded-full bg-primary/10 text-primary group-hover:scale-110 transition-transform">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
-                    <div className="text-sm font-mono text-muted-foreground mb-1 uppercase tracking-wider">Email</div>
+                    <div className="text-xs sm:text-sm font-mono text-muted-foreground mb-1 uppercase tracking-wider">Email</div>
                     <div className="font-medium text-foreground group-hover:text-primary transition-colors">andaidavid8@gmail.com</div>
                   </div>
                 </a>
 
-                <a 
-                  href="https://linkedin.com/in/david-andai-md-msc-49a560116" 
-                  target="_blank" 
+                <a
+                  href="https://linkedin.com/in/david-andai-md-msc-49a560116"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 rounded-xl border border-border/50 bg-background/50 hover:bg-accent/10 hover:border-accent/30 transition-all group"
                 >
@@ -71,14 +71,14 @@ export function Contact() {
                     <Linkedin className="w-5 h-5" />
                   </div>
                   <div>
-                    <div className="text-sm font-mono text-muted-foreground mb-1 uppercase tracking-wider">LinkedIn</div>
+                    <div className="text-xs sm:text-sm font-mono text-muted-foreground mb-1 uppercase tracking-wider">LinkedIn</div>
                     <div className="font-medium text-foreground group-hover:text-primary transition-colors">David Andai</div>
                   </div>
                 </a>
 
-                <a 
-                  href="https://github.com/Dr-andai" 
-                  target="_blank" 
+                <a
+                  href="https://github.com/Dr-andai"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 rounded-xl border border-border/50 bg-background/50 hover:bg-accent/10 hover:border-accent/30 transition-all group"
                 >
@@ -86,7 +86,7 @@ export function Contact() {
                     <Github className="w-5 h-5" />
                   </div>
                   <div>
-                    <div className="text-sm font-mono text-muted-foreground mb-1 uppercase tracking-wider">GitHub</div>
+                    <div className="text-xs sm:text-sm font-mono text-muted-foreground mb-1 uppercase tracking-wider">GitHub</div>
                     <div className="font-medium text-foreground group-hover:text-primary transition-colors">@Dr-andai</div>
                   </div>
                 </a>

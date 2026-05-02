@@ -17,14 +17,14 @@ export function Affiliations() {
   const inView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <section id="affiliations" className="py-16 relative overflow-hidden bg-background border-t border-border/50">
+    <section id="affiliations" className="py-16 relative overflow-hidden bg-background border-t border-border/50 scroll-mt-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <motion.h2 
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-2xl font-bold tracking-tight text-foreground/80"
+            className="text-base sm:text-2xl font-bold tracking-tight text-foreground/80"
           >
             Affiliations
           </motion.h2>
@@ -46,7 +46,7 @@ export function Affiliations() {
                 borderColor: "hsl(var(--primary))",
                 boxShadow: "0 0 20px rgba(8,90,100,0.3)"
               }}
-              className="px-3 py-1.5 sm:px-5 sm:py-2.5 text-sm rounded-full border border-border/50 bg-card/30 text-muted-foreground font-medium transition-all duration-300 cursor-default grayscale hover:grayscale-0"
+              className="px-3 py-1.5 sm:px-5 sm:py-2.5 text-xs sm:text-sm rounded-full border border-border/50 bg-card/30 text-muted-foreground font-medium transition-all duration-300 cursor-default grayscale hover:grayscale-0"
             >
               {org}
             </motion.div>

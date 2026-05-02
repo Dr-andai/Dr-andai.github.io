@@ -7,7 +7,7 @@ const projects = [
     title: "Neuroexposome Modeling",
     status: "Ongoing",
     icon: BrainCircuit,
-    description: "Scoping review for my MNeuroSc thesis examining computational models that capture the neuroepidemiology of neurodegenerative diseases, mapping how the external exposome affects Brain Health",
+    description: "Scoping review for my MNeuroSc thesis examining computational models that capture the exposome and neurodegenerative diseases progression.",
     link: null,
   },
   {
@@ -21,7 +21,7 @@ const projects = [
     title: "Africa Exposome Data Repository",
     status: "Ongoing",
     icon: Database,
-    description: "Data cards showing annual percentage changes, policy context, and sources for key exposome variables: air pollution, green spaces, climate disasters, GDP, gender equality, and migration.",
+    description: "Data cards showing annual percentage changes, policy context, and sources for key exposome variables: air pollution, green spaces, climate disasters, GDP, gender equality, migration etc.",
     link: null,
   },
   {
@@ -52,7 +52,7 @@ export function Projects() {
   const inView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <section id="projects" className="py-14 sm:py-24 relative overflow-hidden bg-background">
+    <section id="projects" className="py-14 sm:py-24 relative overflow-hidden bg-background scroll-mt-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="text-center mb-6">
@@ -61,7 +61,7 @@ export function Projects() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground"
+            className="text-xl sm:text-3xl font-bold tracking-tight text-foreground"
           >
             Neural Dome Portfolio
           </motion.h2>
@@ -79,7 +79,7 @@ export function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-center text-muted-foreground max-w-2xl mx-auto mb-14 leading-relaxed"
+          className="text-center text-xs sm:text-base text-muted-foreground max-w-2xl mx-auto mb-14 leading-relaxed"
         >
           These projects focus on understanding neuroepidemiology in Africa,
           the exposome factors across the life course and applying data science methods.
@@ -152,9 +152,9 @@ function ProjectCard({ project }: { project: typeof projects[number] }) {
           </span>
         </div>
 
-        <h3 className="text-xl font-bold text-foreground mb-3">{project.title}</h3>
+        <h3 className="text-sm sm:text-xl font-bold text-foreground mb-3">{project.title}</h3>
 
-        <p className="text-muted-foreground text-sm leading-relaxed flex-grow">
+        <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed flex-grow text-justify">
           {project.description}
         </p>
 
@@ -163,7 +163,7 @@ function ProjectCard({ project }: { project: typeof projects[number] }) {
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-[#085a64] dark:text-[#a4d3df] hover:underline underline-offset-2"
+            className="mt-5 inline-flex items-center gap-2 text-xs sm:text-sm font-medium text-[#085a64] dark:text-[#a4d3df] hover:underline underline-offset-2"
           >
             <ExternalLink className="w-4 h-4" />
             View Project

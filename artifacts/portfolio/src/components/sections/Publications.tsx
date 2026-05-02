@@ -51,7 +51,7 @@ export function Publications() {
   const inView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <section id="publications" className="py-14 sm:py-24 relative overflow-hidden bg-background">
+    <section id="publications" className="py-14 sm:py-24 relative overflow-hidden bg-background scroll-mt-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2 
@@ -59,7 +59,7 @@ export function Publications() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground"
+            className="text-xl sm:text-3xl font-bold tracking-tight text-foreground"
           >
             Selected Publications
           </motion.h2>
@@ -93,16 +93,16 @@ export function Publications() {
                   <span className="px-2.5 py-1 text-xs font-bold uppercase tracking-wider rounded-md bg-accent/10 text-accent border border-accent/20">
                     {pub.journal}
                   </span>
-                  <span className="text-muted-foreground font-mono text-sm">
+                  <span className="text-muted-foreground font-mono text-xs sm:text-sm">
                     {pub.year}
                   </span>
                 </div>
                 
-                <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                <h3 className="text-sm sm:text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
                   {pub.title}
                 </h3>
                 
-                <p className="text-muted-foreground mb-4">
+                <p className="text-muted-foreground text-xs sm:text-sm mb-4">
                   {pub.authors}
                 </p>
                 
