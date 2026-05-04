@@ -206,7 +206,7 @@ export function Hero() {
                 </a>
                 <span className="opacity-50 mx-2">·</span>
                 <a
-                  href="https://minds-africa.org/about-us/"
+                  href="https://minds-africa.org/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="underline underline-offset-2 hover:opacity-75 transition-opacity"
