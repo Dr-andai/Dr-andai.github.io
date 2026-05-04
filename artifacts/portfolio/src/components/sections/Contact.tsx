@@ -57,7 +57,7 @@ export function Contact() {
                   </div>
                   <div>
                     <div className="text-xs sm:text-sm font-mono text-muted-foreground mb-1 uppercase tracking-wider">Email</div>
-                    <div className="font-medium text-foreground group-hover:text-primary transition-colors">andaidavid8@gmail.com</div>
+                    <div className="font-medium text-foreground group-hover:text-primary transition-colors">davidandai@afiadata.org</div>
                   </div>
                 </a>
 
