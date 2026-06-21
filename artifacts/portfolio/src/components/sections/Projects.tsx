@@ -26,10 +26,10 @@ const projects = [
   },
   {
     title: "Modeling Hub",
-    status: "Ongoing",
+    status: "Live",
     icon: FlaskConical,
-    description: "Studying computational models from first principles. GAMs, Variational methods, etc., alongside machine learning approaches including brain age gap estimation, LLMs and graph networks for brain health.",
-    link: null,
+    description: "Exploring exposome modeling through Bayesian probability and GLMs using Apple's MLX framework, building from first principles with Statistical Rethinking as a guide.",
+    link: "https://github.com/Dr-andai/neuro_mlx",
   },
   {
     title: "Brain Age Gap",
@@ -127,6 +127,7 @@ function ProjectCard({ project }: { project: typeof projects[number] }) {
 
   const Icon = project.icon;
   const isCompleted = project.status === "Completed";
+  const isLive = project.status === "Live";
 
   return (
     <motion.div
@@ -146,6 +147,8 @@ function ProjectCard({ project }: { project: typeof projects[number] }) {
           <span className={`px-2.5 py-1 text-xs font-mono font-medium rounded-full border ${
             isCompleted
               ? "bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border-emerald-500/30"
+              : isLive
+              ? "bg-violet-500/15 text-violet-600 dark:text-violet-400 border-violet-500/30"
               : "bg-[#a4d3df]/15 text-[#085a64] dark:text-[#a4d3df] border-[#a4d3df]/30"
           }`}>
             {project.status}
@@ -158,7 +161,7 @@ function ProjectCard({ project }: { project: typeof projects[number] }) {
           {project.description}
         </p>
 
-        {isCompleted && project.link && (
+        {(isCompleted || isLive) && project.link && (
           <a
             href={project.link}
             target="_blank"
