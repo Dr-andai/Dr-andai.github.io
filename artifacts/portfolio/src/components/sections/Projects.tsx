@@ -18,11 +18,11 @@ const projects = [
     link: null,
   },
   {
-    title: "Africa Exposome Data Repository",
-    status: "Ongoing",
+    title: "Afroglia",
+    status: "Live",
     icon: Database,
     description: "Data cards showing annual percentage changes, policy context, and sources for key exposome variables: air pollution, green spaces, climate disasters, GDP, gender equality, migration etc.",
-    link: null,
+    link: "https://afroglia.com/",
   },
   {
     title: "Modeling Hub",
