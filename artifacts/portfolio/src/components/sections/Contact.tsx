@@ -62,7 +62,7 @@ export function Contact() {
                 </a>
 
                 <a
-                  href="https://linkedin.com/in/david-andai-md-msc-49a560116"
+                  href="https://www.linkedin.com/in/david-andai-49a560116/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 rounded-xl border border-border/50 bg-background/50 hover:bg-accent/10 hover:border-accent/30 transition-all group"
