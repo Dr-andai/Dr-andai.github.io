@@ -4,8 +4,8 @@ import { Download, Mail, ChevronDown, Award, BookOpen, Users, ShieldCheck, Brain
 import { FaLinkedin } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 
-const MINDS_LINKEDIN_URL = "https://www.linkedin.com/posts/mandela-institute-for-development-studies_mindsscholars-mindsafrica-panafricanleadership-activity-7440342407285534720-twBA?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAABzqBLYBF2WsHK8P3qUKKWcpKsYI-FSLp84";
-const MY_LINKEDIN_URL = "https://www.linkedin.com/in/david-andai-md-msc-49a560116";
+const MINDS_LINKEDIN_URL = "https://minds-africa.org/scholarship-program-for-leadership-development/";
+const MY_LINKEDIN_URL = "https://www.linkedin.com/in/david-andai-49a560116/";
 const HEADSHOT_PATH = "/headshot.jpg";
 
 const BRAIN_TOPICS = [
