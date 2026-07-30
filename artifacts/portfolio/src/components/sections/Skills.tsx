@@ -1,30 +1,16 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Mail, Award, BookOpen, Users } from "lucide-react";
+import { requestMailto } from "@/lib/requestMailto";
 
 
 type CertCategory = "medicine" | "neuroscience" | "ml";
 
 // Certificates are not published with the site — visitors request copies by email.
 function certRequestMailto(label: string) {
-  return (
-    "mailto:andaidavid8@gmail.com" +
-    "?subject=" +
-    encodeURIComponent(`Certificate request — ${label}`) +
-    "&body=" +
-    encodeURIComponent(
-      [
-        "Hello Dr. Andai,",
-        "",
-        `I would like to request a copy of your "${label}" certificate.`,
-        "",
-        "Name:",
-        "Organisation:",
-        "Reason for the request:",
-        "",
-        "Thank you,",
-      ].join("\n"),
-    )
+  return requestMailto(
+    `Certificate request: ${label}`,
+    `a copy of your "${label}" certificate`,
   );
 }
 

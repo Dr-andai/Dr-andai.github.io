@@ -3,30 +3,19 @@ import { motion, useAnimation, useInView, type Variants } from "framer-motion";
 import { Mail, ChevronDown, Award, BookOpen, Users, ShieldCheck, Brain, TrendingUp, Lightbulb } from "lucide-react";
 import { FaLinkedin } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
+import { requestMailto } from "@/lib/requestMailto";
 
 const MINDS_LINKEDIN_URL = "https://minds-africa.org/scholarship-program-for-leadership-development/";
 const MY_LINKEDIN_URL = "https://www.linkedin.com/in/david-andai-49a560116/";
 const HEADSHOT_PATH = "/headshot.jpg";
 
-// The CV is not published with the site — visitors request a copy by email.
-const CV_REQUEST_MAILTO =
-  "mailto:andaidavid8@gmail.com" +
-  "?subject=" +
-  encodeURIComponent("CV request — Dr. David Andai") +
-  "&body=" +
-  encodeURIComponent(
-    [
-      "Hello Dr. Andai,",
-      "",
-      "I would like to request a copy of your CV.",
-      "",
-      "Name:",
-      "Organisation:",
-      "Reason for the request:",
-      "",
-      "Thank you,",
-    ].join("\n"),
-  );
+// Neither the CV nor the licence details are published with the site —
+// visitors request them by email.
+const CV_REQUEST_MAILTO = requestMailto("CV request", "a copy of your CV");
+const LICENCE_REQUEST_MAILTO = requestMailto(
+  "Medical licence request",
+  "your medical practising licence details",
+);
 
 const BRAIN_TOPICS = [
   {
@@ -256,11 +245,11 @@ export function Hero() {
                 variant="outline"
                 className="hover-elevate gap-1 border-[#085a64]/50 text-[#085a64] dark:text-[#a4d3df] hover:bg-[#085a64]/10 text-[10px] px-2.5 py-1 h-7 sm:h-9 sm:text-sm sm:px-4 sm:gap-2"
                 asChild
-                data-testid="link-medical-licence"
+                data-testid="button-request-medical-licence"
               >
-                <a href="https://osp.kmpdc.go.ke/auth?type=practice_licence&id=7022c6025eb2fe6e46db24fd1aa9662e" target="_blank" rel="noopener noreferrer">
+                <a href={LICENCE_REQUEST_MAILTO}>
                   <ShieldCheck className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" />
-                  <span>Medical Licence</span>
+                  <span>Request Licence</span>
                 </a>
               </Button>
               <Button
