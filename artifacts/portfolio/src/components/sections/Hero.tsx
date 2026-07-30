@@ -9,13 +9,12 @@ const MINDS_LINKEDIN_URL = "https://minds-africa.org/scholarship-program-for-lea
 const MY_LINKEDIN_URL = "https://www.linkedin.com/in/david-andai-49a560116/";
 const HEADSHOT_PATH = "/headshot.jpg";
 
-// Neither the CV nor the licence details are published with the site —
-// visitors request them by email.
+// The CV is not published with the site — visitors request a copy by email.
 const CV_REQUEST_MAILTO = requestMailto("CV request", "a copy of your CV");
-const LICENCE_REQUEST_MAILTO = requestMailto(
-  "Medical licence request",
-  "your medical practising licence details",
-);
+
+// KMPDC's public register, rather than a deep link carrying my own record id —
+// visitors can still verify registration without that identifier being published.
+const KMPDC_REGISTER_URL = "https://registers.kmpdc.go.ke/";
 
 const BRAIN_TOPICS = [
   {
@@ -245,11 +244,16 @@ export function Hero() {
                 variant="outline"
                 className="hover-elevate gap-1 border-[#085a64]/50 text-[#085a64] dark:text-[#a4d3df] hover:bg-[#085a64]/10 text-[10px] px-2.5 py-1 h-7 sm:h-9 sm:text-sm sm:px-4 sm:gap-2"
                 asChild
-                data-testid="button-request-medical-licence"
+                data-testid="link-medical-licence"
               >
-                <a href={LICENCE_REQUEST_MAILTO}>
+                <a
+                  href={KMPDC_REGISTER_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Verify my registration on KMPDC's public register"
+                >
                   <ShieldCheck className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" />
-                  <span>Request Licence</span>
+                  <span>Verify Licence</span>
                 </a>
               </Button>
               <Button
