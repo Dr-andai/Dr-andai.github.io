@@ -1,12 +1,32 @@
 import { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView, type Variants } from "framer-motion";
-import { Download, Mail, ChevronDown, Award, BookOpen, Users, ShieldCheck, Brain, TrendingUp, Lightbulb } from "lucide-react";
+import { Mail, ChevronDown, Award, BookOpen, Users, ShieldCheck, Brain, TrendingUp, Lightbulb } from "lucide-react";
 import { FaLinkedin } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 
 const MINDS_LINKEDIN_URL = "https://minds-africa.org/scholarship-program-for-leadership-development/";
 const MY_LINKEDIN_URL = "https://www.linkedin.com/in/david-andai-49a560116/";
 const HEADSHOT_PATH = "/headshot.jpg";
+
+// The CV is not published with the site — visitors request a copy by email.
+const CV_REQUEST_MAILTO =
+  "mailto:andaidavid8@gmail.com" +
+  "?subject=" +
+  encodeURIComponent("CV request — Dr. David Andai") +
+  "&body=" +
+  encodeURIComponent(
+    [
+      "Hello Dr. Andai,",
+      "",
+      "I would like to request a copy of your CV.",
+      "",
+      "Name:",
+      "Organisation:",
+      "Reason for the request:",
+      "",
+      "Thank you,",
+    ].join("\n"),
+  );
 
 const BRAIN_TOPICS = [
   {
@@ -224,11 +244,11 @@ export function Hero() {
                 size="sm"
                 className="hover-elevate bg-primary text-primary-foreground hover:bg-primary/90 transition-all hover:shadow-[0_0_20px_rgba(164,211,223,0.4)] gap-1 group text-[10px] px-2.5 py-1 h-7 sm:h-9 sm:text-sm sm:px-4 sm:gap-2"
                 asChild
-                data-testid="button-download-cv"
+                data-testid="button-request-cv"
               >
-                <a href="/cv.pdf" download>
-                  <Download className="w-3 h-3 group-hover:-translate-y-1 transition-transform sm:w-4 sm:h-4 flex-shrink-0" />
-                  <span>Download CV</span>
+                <a href={CV_REQUEST_MAILTO}>
+                  <Mail className="w-3 h-3 group-hover:-translate-y-1 transition-transform sm:w-4 sm:h-4 flex-shrink-0" />
+                  <span>Request CV</span>
                 </a>
               </Button>
               <Button

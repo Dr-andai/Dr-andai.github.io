@@ -1,9 +1,32 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { FileDown, Award, BookOpen, Users } from "lucide-react";
+import { Mail, Award, BookOpen, Users } from "lucide-react";
 
 
 type CertCategory = "medicine" | "neuroscience" | "ml";
+
+// Certificates are not published with the site — visitors request copies by email.
+function certRequestMailto(label: string) {
+  return (
+    "mailto:andaidavid8@gmail.com" +
+    "?subject=" +
+    encodeURIComponent(`Certificate request — ${label}`) +
+    "&body=" +
+    encodeURIComponent(
+      [
+        "Hello Dr. Andai,",
+        "",
+        `I would like to request a copy of your "${label}" certificate.`,
+        "",
+        "Name:",
+        "Organisation:",
+        "Reason for the request:",
+        "",
+        "Thank you,",
+      ].join("\n"),
+    )
+  );
+}
 
 const certificates: { label: string; file: string; category: CertCategory }[] = [
   { label: "Behavioral Research Best Practices", file: "Behavioral Research Best Practices for Clinical Research.pdf", category: "medicine" },
@@ -72,6 +95,9 @@ export function Skills() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="h-1 bg-primary mx-auto mt-2 sm:mt-4 rounded-full"
             />
+            <p className="text-[10px] sm:text-sm text-muted-foreground mt-3 sm:mt-4">
+              Certificates are available on request — select one to email me for a copy.
+            </p>
           </motion.div>
 
           <div className="max-w-5xl mx-auto space-y-10 sm:space-y-10">
@@ -92,13 +118,13 @@ export function Skills() {
                   {certs.map((cert) => (
                     <motion.a
                       key={cert.file}
-                      href={`/skills/${encodeURIComponent(cert.file)}`}
-                      download={cert.label}
+                      href={certRequestMailto(cert.label)}
+                      title={`Request a copy of "${cert.label}" by email`}
                       whileHover={{ scale: 1.04 }}
                       whileTap={{ scale: 0.97 }}
                       className={`inline-flex items-center gap-1 sm:gap-1.5 px-2 py-1 sm:px-4 sm:py-2 rounded-lg text-[10px] sm:text-sm font-medium transition-all ${categoryStyles[category].button}`}
                     >
-                      <FileDown className="w-3 h-3 sm:w-4 sm:h-4 shrink-0" />
+                      <Mail className="w-3 h-3 sm:w-4 sm:h-4 shrink-0" />
                       {cert.label}
                     </motion.a>
                   ))}
