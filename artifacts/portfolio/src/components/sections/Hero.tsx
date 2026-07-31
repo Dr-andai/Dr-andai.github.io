@@ -199,7 +199,7 @@ export function Hero() {
               variants={itemVariants}
               className="text-xs sm:text-lg text-muted-foreground mb-14 sm:mb-18 max-w-2xl leading-relaxed mx-auto lg:mx-0"
             >
-              Advancing brain health across Africa through public health, neuroscience and machine learning tools.
+              Advancing brain health research across Africa through public health, neuroscience and machine learning tools.
             </motion.p>
 
             <motion.div variants={itemVariants} className="mb-6 mt-3 sm:mt-0">
