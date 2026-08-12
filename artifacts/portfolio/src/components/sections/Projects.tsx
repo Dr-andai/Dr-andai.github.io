@@ -11,11 +11,11 @@ const projects = [
     link: null,
   },
   {
-    title: "Dementia Risk Data Cards",
-    status: "Ongoing",
+    title: "Economic Interventions for Lifecourse Brain Health in Africa",
+    status: "Published",
     icon: BarChart2,
-    description: "Linking Sub-Saharan dementia risk factors and management approaches to IHME epidemiology trends, visualised as interactive data cards to support brain health education.",
-    link: null,
+    description: "Co-authored study in Nature Health proposing a lifecourse policy agenda that embeds social welfare levers, cash transfers, school feeding, unemployment grants, pensions, debt relief, into brain health promotion to build brain capital and interrupt intergenerational economic risk across Africa.",
+    link: "https://www.nature.com/articles/s44360-026-00175-1",
   },
   {
     title: "Afroglia",
@@ -161,7 +161,7 @@ function ProjectCard({ project }: { project: typeof projects[number] }) {
           {project.description}
         </p>
 
-        {(isCompleted || isLive) && project.link && (
+        {project.link && (
           <a
             href={project.link}
             target="_blank"
