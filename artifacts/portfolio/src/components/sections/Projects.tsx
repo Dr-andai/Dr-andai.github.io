@@ -4,17 +4,17 @@ import { BrainCircuit, BarChart2, Database, FlaskConical, Scan, Map, ExternalLin
 
 const projects = [
   {
-    title: "Neuroexposome Modeling",
-    status: "Ongoing",
+    title: "Neuroexposome Protocol",
+    status: "Completed",
     icon: BrainCircuit,
-    description: "Scoping review for my MNeuroSc thesis examining computational models that capture the exposome and neurodegenerative diseases progression.",
-    link: null,
+    description: "Scoping review protocol approval for my MNeuroSc thesis examining computational models that capture the exposome and neurodegenerative diseases.",
+    link: "https://drive.google.com/file/d/1_gpDCNYY8UnP_GPLT0zG9kBFEk9YHcQE/view?usp=sharing",
   },
   {
-    title: "Economic Interventions for Lifecourse Brain Health in Africa",
+    title: "Economic Interventions",
     status: "Published",
     icon: BarChart2,
-    description: "Co-authored study in Nature Health proposing a lifecourse policy agenda that embeds social welfare levers, cash transfers, school feeding, unemployment grants, pensions, debt relief, into brain health promotion to build brain capital and interrupt intergenerational economic risk across Africa.",
+    description: "Co-authored study in Nature Health proposing a lifecourse policy agenda for brain health promotion. Contributed towards analysing Dementia progress between Africa and Latin America.",
     link: "https://www.nature.com/articles/s44360-026-00175-1",
   },
   {
